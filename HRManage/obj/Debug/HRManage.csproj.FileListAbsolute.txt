@@ -1,0 +1,15 @@
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\HRManage.exe.config
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\HRManage.exe
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\HRManage.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.csprojResolveAssemblyReference.cache
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.Login.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.Properties.Resources.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.csproj.GenerateResource.Cache
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.exe
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\BLL.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\Model.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\DAL.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\BLL.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\Model.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\DAL.pdb

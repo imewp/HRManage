@@ -1,0 +1,9 @@
+C:\学习\C#\c#\C#高级\HRManage\BLL\bin\Debug\BLL.dll
+C:\学习\C#\c#\C#高级\HRManage\BLL\bin\Debug\BLL.pdb
+C:\学习\C#\c#\C#高级\HRManage\BLL\bin\Debug\DAL.dll
+C:\学习\C#\c#\C#高级\HRManage\BLL\bin\Debug\Model.dll
+C:\学习\C#\c#\C#高级\HRManage\BLL\bin\Debug\DAL.pdb
+C:\学习\C#\c#\C#高级\HRManage\BLL\bin\Debug\Model.pdb
+C:\学习\C#\c#\C#高级\HRManage\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\学习\C#\c#\C#高级\HRManage\BLL\obj\Debug\BLL.dll
+C:\学习\C#\c#\C#高级\HRManage\BLL\obj\Debug\BLL.pdb
