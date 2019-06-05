@@ -13,8 +13,8 @@ namespace DAL
          public static string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();  
         public DBHelperSQL()
         {
-        }
 
+        }
         /// <summary>
         /// 执行SQL语句，返回影响的记录数
         /// </summary>
@@ -40,8 +40,6 @@ namespace DAL
                 }
             }
         }
-
-
         /// <summary>
         /// 执行查询语句，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
         /// </summary>
