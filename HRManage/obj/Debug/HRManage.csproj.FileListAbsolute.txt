@@ -13,3 +13,6 @@ C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\DAL.dll
 C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\BLL.pdb
 C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\Model.pdb
 C:\学习\C#\c#\C#高级\HRManage\HRManage\bin\Debug\DAL.pdb
+D:\C#\HRManage\HRManage\HRManage\bin\Debug\HRManage.exe.config
+D:\C#\HRManage\HRManage\HRManage\obj\Debug\HRManage.exe
+D:\C#\HRManage\HRManage\HRManage\obj\Debug\HRManage.pdb
