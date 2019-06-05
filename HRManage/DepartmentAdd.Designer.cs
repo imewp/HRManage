@@ -28,11 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblDepartmentName = new System.Windows.Forms.Label();
+            this.txtDepartmentName = new System.Windows.Forms.TextBox();
+            this.txtDepartmentPhone = new System.Windows.Forms.TextBox();
+            this.lblDepartmentPhone = new System.Windows.Forms.Label();
+            this.txtHeadOfDepartment = new System.Windows.Forms.TextBox();
+            this.lblHeadOfDepartment = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lblDepartmentName
+            // 
+            this.lblDepartmentName.AutoSize = true;
+            this.lblDepartmentName.Location = new System.Drawing.Point(48, 45);
+            this.lblDepartmentName.Name = "lblDepartmentName";
+            this.lblDepartmentName.Size = new System.Drawing.Size(65, 12);
+            this.lblDepartmentName.TabIndex = 0;
+            this.lblDepartmentName.Text = "部门名称：";
+            // 
+            // txtDepartmentName
+            // 
+            this.txtDepartmentName.Location = new System.Drawing.Point(129, 42);
+            this.txtDepartmentName.Name = "txtDepartmentName";
+            this.txtDepartmentName.Size = new System.Drawing.Size(100, 21);
+            this.txtDepartmentName.TabIndex = 1;
+            // 
+            // txtDepartmentPhone
+            // 
+            this.txtDepartmentPhone.Location = new System.Drawing.Point(129, 131);
+            this.txtDepartmentPhone.Name = "txtDepartmentPhone";
+            this.txtDepartmentPhone.Size = new System.Drawing.Size(100, 21);
+            this.txtDepartmentPhone.TabIndex = 3;
+            // 
+            // lblDepartmentPhone
+            // 
+            this.lblDepartmentPhone.AutoSize = true;
+            this.lblDepartmentPhone.Location = new System.Drawing.Point(48, 134);
+            this.lblDepartmentPhone.Name = "lblDepartmentPhone";
+            this.lblDepartmentPhone.Size = new System.Drawing.Size(65, 12);
+            this.lblDepartmentPhone.TabIndex = 2;
+            this.lblDepartmentPhone.Text = "部门电话：";
+            // 
+            // txtHeadOfDepartment
+            // 
+            this.txtHeadOfDepartment.Location = new System.Drawing.Point(129, 85);
+            this.txtHeadOfDepartment.Name = "txtHeadOfDepartment";
+            this.txtHeadOfDepartment.Size = new System.Drawing.Size(100, 21);
+            this.txtHeadOfDepartment.TabIndex = 5;
+            // 
+            // lblHeadOfDepartment
+            // 
+            this.lblHeadOfDepartment.AutoSize = true;
+            this.lblHeadOfDepartment.Location = new System.Drawing.Point(48, 88);
+            this.lblHeadOfDepartment.Name = "lblHeadOfDepartment";
+            this.lblHeadOfDepartment.Size = new System.Drawing.Size(77, 12);
+            this.lblHeadOfDepartment.TabIndex = 4;
+            this.lblHeadOfDepartment.Text = "部门负责人：";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(50, 182);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "添加";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(170, 181);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 7;
+            this.btnReset.Text = "重置";
+            this.btnReset.UseVisualStyleBackColor = true;
+            // 
+            // DepartmentAdd
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "DepartmentAdd";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtHeadOfDepartment);
+            this.Controls.Add(this.lblHeadOfDepartment);
+            this.Controls.Add(this.txtDepartmentPhone);
+            this.Controls.Add(this.lblDepartmentPhone);
+            this.Controls.Add(this.txtDepartmentName);
+            this.Controls.Add(this.lblDepartmentName);
+            this.Name = "DepartmentAdd";
+            this.Text = "添加部门";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblDepartmentName;
+        private System.Windows.Forms.TextBox txtDepartmentName;
+        private System.Windows.Forms.TextBox txtDepartmentPhone;
+        private System.Windows.Forms.Label lblDepartmentPhone;
+        private System.Windows.Forms.TextBox txtHeadOfDepartment;
+        private System.Windows.Forms.Label lblHeadOfDepartment;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnReset;
     }
 }
