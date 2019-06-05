@@ -7,5 +7,6 @@ namespace BLL
 {
     class Employee
     {
+
     }
 }
