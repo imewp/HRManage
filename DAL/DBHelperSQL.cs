@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace DAL
 {
     class DBHelperSQL
     {
-         public static string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();  
+        public static string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         public DBHelperSQL()
         {
-
         }
+
         /// <summary>
         /// 执行SQL语句，返回影响的记录数
         /// </summary>
@@ -40,6 +40,8 @@ namespace DAL
                 }
             }
         }
+
+
         /// <summary>
         /// 执行查询语句，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
         /// </summary>
@@ -60,12 +62,6 @@ namespace DAL
             {
                 throw e;
             }
-            //			finally
-            //			{
-            //				cmd.Dispose();
-            //				connection.Close();
-            //			}	
-
         }
 
         /// <summary>
@@ -159,5 +155,6 @@ namespace DAL
                 }
             }
         }
+
     }
 }

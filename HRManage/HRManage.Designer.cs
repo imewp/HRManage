@@ -48,7 +48,12 @@
             this.用户维护UToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加用户AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理用户MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -80,21 +85,21 @@
             // 添加员工AToolStripMenuItem
             // 
             this.添加员工AToolStripMenuItem.Name = "添加员工AToolStripMenuItem";
-            this.添加员工AToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.添加员工AToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.添加员工AToolStripMenuItem.Text = "添加员工(&A)";
             this.添加员工AToolStripMenuItem.Click += new System.EventHandler(this.添加员工AToolStripMenuItem_Click);
             // 
             // 管理员工MToolStripMenuItem
             // 
             this.管理员工MToolStripMenuItem.Name = "管理员工MToolStripMenuItem";
-            this.管理员工MToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.管理员工MToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.管理员工MToolStripMenuItem.Text = "管理员工(M)";
             this.管理员工MToolStripMenuItem.Click += new System.EventHandler(this.管理员工MToolStripMenuItem_Click);
             // 
             // 退出系统XToolStripMenuItem
             // 
             this.退出系统XToolStripMenuItem.Name = "退出系统XToolStripMenuItem";
-            this.退出系统XToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.退出系统XToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.退出系统XToolStripMenuItem.Text = "退出系统(X)";
             this.退出系统XToolStripMenuItem.Click += new System.EventHandler(this.退出系统XToolStripMenuItem_Click);
             // 
@@ -110,14 +115,14 @@
             // 添加工资AToolStripMenuItem
             // 
             this.添加工资AToolStripMenuItem.Name = "添加工资AToolStripMenuItem";
-            this.添加工资AToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.添加工资AToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.添加工资AToolStripMenuItem.Text = "添加工资(A)";
             this.添加工资AToolStripMenuItem.Click += new System.EventHandler(this.添加工资AToolStripMenuItem_Click);
             // 
             // 管理工资MToolStripMenuItem
             // 
             this.管理工资MToolStripMenuItem.Name = "管理工资MToolStripMenuItem";
-            this.管理工资MToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.管理工资MToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.管理工资MToolStripMenuItem.Text = "管理工资(M)";
             this.管理工资MToolStripMenuItem.Click += new System.EventHandler(this.管理工资MToolStripMenuItem_Click);
             // 
@@ -133,14 +138,14 @@
             // 添加考核AToolStripMenuItem
             // 
             this.添加考核AToolStripMenuItem.Name = "添加考核AToolStripMenuItem";
-            this.添加考核AToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.添加考核AToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.添加考核AToolStripMenuItem.Text = "添加考核(A)";
             this.添加考核AToolStripMenuItem.Click += new System.EventHandler(this.添加考核AToolStripMenuItem_Click);
             // 
             // 管理考核MToolStripMenuItem
             // 
             this.管理考核MToolStripMenuItem.Name = "管理考核MToolStripMenuItem";
-            this.管理考核MToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.管理考核MToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.管理考核MToolStripMenuItem.Text = "管理考核(M)";
             this.管理考核MToolStripMenuItem.Click += new System.EventHandler(this.管理考核MToolStripMenuItem_Click);
             // 
@@ -156,14 +161,14 @@
             // 员工查询EToolStripMenuItem
             // 
             this.员工查询EToolStripMenuItem.Name = "员工查询EToolStripMenuItem";
-            this.员工查询EToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.员工查询EToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.员工查询EToolStripMenuItem.Text = "员工查询(E)";
             this.员工查询EToolStripMenuItem.Click += new System.EventHandler(this.员工查询EToolStripMenuItem_Click);
             // 
             // 考核查询CToolStripMenuItem
             // 
             this.考核查询CToolStripMenuItem.Name = "考核查询CToolStripMenuItem";
-            this.考核查询CToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.考核查询CToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.考核查询CToolStripMenuItem.Text = "考核查询(C)";
             this.考核查询CToolStripMenuItem.Click += new System.EventHandler(this.考核查询CToolStripMenuItem_Click);
             // 
@@ -179,14 +184,14 @@
             // 添加部门AToolStripMenuItem
             // 
             this.添加部门AToolStripMenuItem.Name = "添加部门AToolStripMenuItem";
-            this.添加部门AToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.添加部门AToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.添加部门AToolStripMenuItem.Text = "添加部门(A)";
             this.添加部门AToolStripMenuItem.Click += new System.EventHandler(this.添加部门AToolStripMenuItem_Click);
             // 
             // 管理部门MToolStripMenuItem
             // 
             this.管理部门MToolStripMenuItem.Name = "管理部门MToolStripMenuItem";
-            this.管理部门MToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.管理部门MToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.管理部门MToolStripMenuItem.Text = "管理部门(M)";
             this.管理部门MToolStripMenuItem.Click += new System.EventHandler(this.管理部门MToolStripMenuItem_Click);
             // 
@@ -202,16 +207,59 @@
             // 添加用户AToolStripMenuItem
             // 
             this.添加用户AToolStripMenuItem.Name = "添加用户AToolStripMenuItem";
-            this.添加用户AToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.添加用户AToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.添加用户AToolStripMenuItem.Text = "添加用户(A)";
             this.添加用户AToolStripMenuItem.Click += new System.EventHandler(this.添加用户AToolStripMenuItem_Click);
             // 
             // 管理用户MToolStripMenuItem
             // 
             this.管理用户MToolStripMenuItem.Name = "管理用户MToolStripMenuItem";
-            this.管理用户MToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.管理用户MToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
             this.管理用户MToolStripMenuItem.Text = "管理用户(M)";
             this.管理用户MToolStripMenuItem.Click += new System.EventHandler(this.管理用户MToolStripMenuItem_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 32);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1002, 58);
+            this.toolStrip1.TabIndex = 5;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.Image = global::HRManage.Properties.Resources.员工管理;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 55);
+            this.toolStripButton1.Text = "员工管理";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.AutoSize = false;
+            this.toolStripButton2.Image = global::HRManage.Properties.Resources.工资管理;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(60, 55);
+            this.toolStripButton2.Text = "工资管理";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.AutoSize = false;
+            this.toolStripButton3.Image = global::HRManage.Properties.Resources.退出系统;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(60, 55);
+            this.toolStripButton3.Text = "退出系统";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // HRManage
             // 
@@ -219,6 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1002, 712);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -227,6 +276,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +305,10 @@
         private System.Windows.Forms.ToolStripMenuItem 用户维护UToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 添加用户AToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 管理用户MToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
 

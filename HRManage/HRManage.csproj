@@ -130,6 +130,27 @@
     <Compile Include="UserManage.Designer.cs">
       <DependentUpon>UserManage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CheckAdd.resx">
+      <DependentUpon>CheckAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckManage.resx">
+      <DependentUpon>CheckManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckSearch.resx">
+      <DependentUpon>CheckSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentManage.resx">
+      <DependentUpon>DepartmentManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeAdd.resx">
+      <DependentUpon>EmployeeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeManage.resx">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmploySearch.resx">
+      <DependentUpon>EmploySearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HRManage.resx">
       <DependentUpon>HRManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,7 +165,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SalaryAdd.resx">
+      <DependentUpon>SalaryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalaryManage.resx">
+      <DependentUpon>SalaryManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +196,15 @@
       <Project>{dd0e1d8a-db1c-4f05-8bd9-aa540a315fac}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\员工管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\工资管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\退出系统.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

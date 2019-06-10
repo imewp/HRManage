@@ -104,7 +104,5 @@ namespace HRManage
             frmUserManage.MdiParent = this;
             frmUserManage.Show();
         }
-
-
     }
 }
