@@ -48,7 +48,7 @@
             this.txtBasicSalary = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblBasicSalary = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpSalayMonth = new System.Windows.Forms.DateTimePicker();
             this.lblSalayMonth = new System.Windows.Forms.Label();
@@ -70,6 +70,7 @@
             this.dgvSalaryInfo.RowTemplate.Height = 30;
             this.dgvSalaryInfo.Size = new System.Drawing.Size(791, 210);
             this.dgvSalaryInfo.TabIndex = 13;
+            this.dgvSalaryInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalaryInfo_CellClick);
             // 
             // btnDelete
             // 
@@ -79,6 +80,7 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtTotalPay
             // 
@@ -168,6 +170,7 @@
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtAllowance
             // 
@@ -242,13 +245,13 @@
             this.lblBasicSalary.TabIndex = 12;
             this.lblBasicSalary.Text = "基本工资：";
             // 
-            // textBox1
+            // txtRemarks
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 186);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 222);
-            this.textBox1.TabIndex = 19;
+            this.txtRemarks.Location = new System.Drawing.Point(127, 186);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(206, 222);
+            this.txtRemarks.TabIndex = 19;
             // 
             // label1
             // 
@@ -309,7 +312,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtRemarks);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpSalayMonth);
             this.groupBox1.Controls.Add(this.lblSalayMonth);
@@ -337,6 +340,7 @@
             this.Name = "SalaryManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理工资";
+            this.Load += new System.EventHandler(this.SalaryManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryInfo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -368,7 +372,7 @@
         private System.Windows.Forms.TextBox txtBasicSalary;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblBasicSalary;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRemarks;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpSalayMonth;
         private System.Windows.Forms.Label lblSalayMonth;

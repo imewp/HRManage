@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpSalayMonth = new System.Windows.Forms.DateTimePicker();
             this.lblSalayMonth = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtRemarks);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpSalayMonth);
             this.groupBox1.Controls.Add(this.lblSalayMonth);
@@ -79,13 +79,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
             // 
-            // textBox1
+            // txtRemarks
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 186);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 222);
-            this.textBox1.TabIndex = 19;
+            this.txtRemarks.Location = new System.Drawing.Point(127, 186);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(206, 222);
+            this.txtRemarks.TabIndex = 19;
             // 
             // label1
             // 
@@ -305,6 +305,7 @@
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnAdd
             // 
@@ -314,6 +315,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvEmployeeInfo
             // 
@@ -323,6 +325,7 @@
             this.dgvEmployeeInfo.RowTemplate.Height = 30;
             this.dgvEmployeeInfo.Size = new System.Drawing.Size(791, 210);
             this.dgvEmployeeInfo.TabIndex = 8;
+            this.dgvEmployeeInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeInfo_CellClick);
             // 
             // SalaryAdd
             // 
@@ -337,6 +340,7 @@
             this.Name = "SalaryAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "添加工资";
+            this.Load += new System.EventHandler(this.SalaryAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -355,7 +359,7 @@
         private System.Windows.Forms.Label lblEmployeeID;
         private System.Windows.Forms.DateTimePicker dtpSalayMonth;
         private System.Windows.Forms.Label lblSalayMonth;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRemarks;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtTotalPay;
