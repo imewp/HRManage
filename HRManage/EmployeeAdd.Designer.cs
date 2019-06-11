@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
-            this.lblSex = new System.Windows.Forms.Label();
-            this.cboSex = new System.Windows.Forms.ComboBox();
-            this.lblBirthday = new System.Windows.Forms.Label();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.cboEducation = new System.Windows.Forms.ComboBox();
-            this.lblEducation = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
+            this.cboEducation = new System.Windows.Forms.ComboBox();
+            this.lblEducation = new System.Windows.Forms.Label();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.lblBirthday = new System.Windows.Forms.Label();
+            this.cboSex = new System.Windows.Forms.ComboBox();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.lblEmployeeName = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtPosition = new System.Windows.Forms.TextBox();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.txtDepartmentID = new System.Windows.Forms.TextBox();
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.lblRemarks = new System.Windows.Forms.Label();
             this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
@@ -47,9 +50,6 @@
             this.lblDepartmentID = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
-            this.txtDepartmentID = new System.Windows.Forms.TextBox();
-            this.txtPosition = new System.Windows.Forms.TextBox();
-            this.lblPosition = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -75,77 +75,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
             // 
-            // groupBox2
+            // txtPhone
             // 
-            this.groupBox2.Controls.Add(this.txtPosition);
-            this.groupBox2.Controls.Add(this.lblPosition);
-            this.groupBox2.Controls.Add(this.txtDepartmentID);
-            this.groupBox2.Controls.Add(this.txtRemarks);
-            this.groupBox2.Controls.Add(this.lblRemarks);
-            this.groupBox2.Controls.Add(this.dtpHireDate);
-            this.groupBox2.Controls.Add(this.lblHireDate);
-            this.groupBox2.Controls.Add(this.lblDepartmentID);
-            this.groupBox2.Controls.Add(this.txtEmployeeID);
-            this.groupBox2.Controls.Add(this.lblEmployeeID);
-            this.groupBox2.Location = new System.Drawing.Point(515, 71);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(403, 284);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "工作信息";
+            this.txtPhone.Location = new System.Drawing.Point(127, 226);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(206, 28);
+            this.txtPhone.TabIndex = 9;
             // 
-            // lblEmployeeName
+            // lblPhone
             // 
-            this.lblEmployeeName.AutoSize = true;
-            this.lblEmployeeName.Location = new System.Drawing.Point(38, 46);
-            this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(98, 18);
-            this.lblEmployeeName.TabIndex = 0;
-            this.lblEmployeeName.Text = "员工姓名：";
-            // 
-            // txtEmployeeName
-            // 
-            this.txtEmployeeName.Location = new System.Drawing.Point(127, 43);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(206, 28);
-            this.txtEmployeeName.TabIndex = 1;
-            // 
-            // lblSex
-            // 
-            this.lblSex.AutoSize = true;
-            this.lblSex.Location = new System.Drawing.Point(38, 95);
-            this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(98, 18);
-            this.lblSex.TabIndex = 2;
-            this.lblSex.Text = "性    别：";
-            // 
-            // cboSex
-            // 
-            this.cboSex.FormattingEnabled = true;
-            this.cboSex.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.cboSex.Location = new System.Drawing.Point(127, 92);
-            this.cboSex.Name = "cboSex";
-            this.cboSex.Size = new System.Drawing.Size(206, 26);
-            this.cboSex.TabIndex = 3;
-            this.cboSex.Text = "男";
-            // 
-            // lblBirthday
-            // 
-            this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Location = new System.Drawing.Point(38, 142);
-            this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(98, 18);
-            this.lblBirthday.TabIndex = 4;
-            this.lblBirthday.Text = "出生日期：";
-            // 
-            // dtpBirthday
-            // 
-            this.dtpBirthday.Location = new System.Drawing.Point(127, 135);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(206, 28);
-            this.dtpBirthday.TabIndex = 5;
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(38, 229);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(98, 18);
+            this.lblPhone.TabIndex = 8;
+            this.lblPhone.Text = "电    话：";
             // 
             // cboEducation
             // 
@@ -173,21 +117,100 @@
             this.lblEducation.TabIndex = 6;
             this.lblEducation.Text = "学    历：";
             // 
-            // txtPhone
+            // dtpBirthday
             // 
-            this.txtPhone.Location = new System.Drawing.Point(127, 226);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(206, 28);
-            this.txtPhone.TabIndex = 9;
+            this.dtpBirthday.Location = new System.Drawing.Point(127, 135);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(206, 28);
+            this.dtpBirthday.TabIndex = 5;
             // 
-            // lblPhone
+            // lblBirthday
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(38, 229);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(98, 18);
-            this.lblPhone.TabIndex = 8;
-            this.lblPhone.Text = "电    话：";
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Location = new System.Drawing.Point(38, 142);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(98, 18);
+            this.lblBirthday.TabIndex = 4;
+            this.lblBirthday.Text = "出生日期：";
+            // 
+            // cboSex
+            // 
+            this.cboSex.FormattingEnabled = true;
+            this.cboSex.Items.AddRange(new object[] {
+            "男",
+            "女"});
+            this.cboSex.Location = new System.Drawing.Point(127, 92);
+            this.cboSex.Name = "cboSex";
+            this.cboSex.Size = new System.Drawing.Size(206, 26);
+            this.cboSex.TabIndex = 3;
+            this.cboSex.Text = "男";
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Location = new System.Drawing.Point(38, 95);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(98, 18);
+            this.lblSex.TabIndex = 2;
+            this.lblSex.Text = "性    别：";
+            // 
+            // txtEmployeeName
+            // 
+            this.txtEmployeeName.Location = new System.Drawing.Point(127, 43);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(206, 28);
+            this.txtEmployeeName.TabIndex = 1;
+            // 
+            // lblEmployeeName
+            // 
+            this.lblEmployeeName.AutoSize = true;
+            this.lblEmployeeName.Location = new System.Drawing.Point(38, 46);
+            this.lblEmployeeName.Name = "lblEmployeeName";
+            this.lblEmployeeName.Size = new System.Drawing.Size(98, 18);
+            this.lblEmployeeName.TabIndex = 0;
+            this.lblEmployeeName.Text = "员工姓名：";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtPosition);
+            this.groupBox2.Controls.Add(this.lblPosition);
+            this.groupBox2.Controls.Add(this.txtDepartmentID);
+            this.groupBox2.Controls.Add(this.txtRemarks);
+            this.groupBox2.Controls.Add(this.lblRemarks);
+            this.groupBox2.Controls.Add(this.dtpHireDate);
+            this.groupBox2.Controls.Add(this.lblHireDate);
+            this.groupBox2.Controls.Add(this.lblDepartmentID);
+            this.groupBox2.Controls.Add(this.txtEmployeeID);
+            this.groupBox2.Controls.Add(this.lblEmployeeID);
+            this.groupBox2.Location = new System.Drawing.Point(515, 71);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(403, 284);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "工作信息";
+            // 
+            // txtPosition
+            // 
+            this.txtPosition.Location = new System.Drawing.Point(143, 128);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(206, 28);
+            this.txtPosition.TabIndex = 22;
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Location = new System.Drawing.Point(54, 131);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(98, 18);
+            this.lblPosition.TabIndex = 21;
+            this.lblPosition.Text = "职    务：";
+            // 
+            // txtDepartmentID
+            // 
+            this.txtDepartmentID.Location = new System.Drawing.Point(143, 86);
+            this.txtDepartmentID.Name = "txtDepartmentID";
+            this.txtDepartmentID.Size = new System.Drawing.Size(206, 28);
+            this.txtDepartmentID.TabIndex = 20;
             // 
             // txtRemarks
             // 
@@ -246,29 +269,6 @@
             this.lblEmployeeID.TabIndex = 10;
             this.lblEmployeeID.Text = "员工编号：";
             // 
-            // txtDepartmentID
-            // 
-            this.txtDepartmentID.Location = new System.Drawing.Point(143, 86);
-            this.txtDepartmentID.Name = "txtDepartmentID";
-            this.txtDepartmentID.Size = new System.Drawing.Size(206, 28);
-            this.txtDepartmentID.TabIndex = 20;
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.Location = new System.Drawing.Point(143, 128);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(206, 28);
-            this.txtPosition.TabIndex = 22;
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Location = new System.Drawing.Point(54, 131);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(98, 18);
-            this.lblPosition.TabIndex = 21;
-            this.lblPosition.Text = "职    务：";
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(352, 376);
@@ -297,6 +297,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "EmployeeAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "添加员工";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

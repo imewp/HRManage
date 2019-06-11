@@ -82,6 +82,7 @@
             this.cboUserType.Name = "cboUserType";
             this.cboUserType.Size = new System.Drawing.Size(198, 26);
             this.cboUserType.TabIndex = 8;
+            this.cboUserType.Text = "操作员";
             // 
             // label1
             // 
@@ -100,6 +101,7 @@
             this.btnReset.TabIndex = 11;
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnAdd
             // 
@@ -125,6 +127,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblName);
             this.Name = "UserAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserAdd";
             this.ResumeLayout(false);
             this.PerformLayout();

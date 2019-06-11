@@ -20,3 +20,9 @@ C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.EmployeeAdd.resour
 C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.EmployeeManage.resources
 C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.SalaryAdd.resources
 C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.SalaryManage.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.CheckAdd.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.CheckManage.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.CheckSearch.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.EmploySearch.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.UserManage.resources
+C:\学习\C#\c#\C#高级\HRManage\HRManage\obj\Debug\HRManage.DepartmentAdd.resources

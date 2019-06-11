@@ -35,11 +35,11 @@
             this.txtDepartmentPhone = new System.Windows.Forms.TextBox();
             this.lblDepartmentPhone = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDepartmentInfo = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartmentInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDepartmentName
@@ -105,14 +105,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "部门信息";
             // 
-            // dataGridView1
+            // dgvDepartmentInfo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(447, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(493, 238);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvDepartmentInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDepartmentInfo.Location = new System.Drawing.Point(447, 61);
+            this.dgvDepartmentInfo.Name = "dgvDepartmentInfo";
+            this.dgvDepartmentInfo.RowTemplate.Height = 30;
+            this.dgvDepartmentInfo.Size = new System.Drawing.Size(493, 238);
+            this.dgvDepartmentInfo.TabIndex = 7;
+            this.dgvDepartmentInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnEdit
             // 
@@ -122,6 +123,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "修改";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDel
             // 
@@ -131,6 +133,7 @@
             this.btnDel.TabIndex = 9;
             this.btnDel.Text = "删除";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // DepartmentManage
             // 
@@ -139,14 +142,16 @@
             this.ClientSize = new System.Drawing.Size(1054, 371);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDepartmentInfo);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DepartmentManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理部门";
+            this.Load += new System.EventHandler(this.DepartmentManage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartmentInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,7 +165,7 @@
         private System.Windows.Forms.TextBox txtDepartmentPhone;
         private System.Windows.Forms.Label lblDepartmentPhone;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDepartmentInfo;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDel;
 

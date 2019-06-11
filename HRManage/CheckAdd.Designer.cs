@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
+            this.lblRemarks = new System.Windows.Forms.Label();
+            this.txtDepartmentName = new System.Windows.Forms.TextBox();
+            this.lblDepartmentName = new System.Windows.Forms.Label();
+            this.txtEmplyeeName = new System.Windows.Forms.TextBox();
+            this.lblEmplyeeName = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblCheckPeople = new System.Windows.Forms.Label();
-            this.txtCheckResult = new System.Windows.Forms.TextBox();
-            this.lblCheckResult = new System.Windows.Forms.Label();
-            this.txtEmplyeeName = new System.Windows.Forms.TextBox();
-            this.lblEmplyeeName = new System.Windows.Forms.Label();
-            this.txtDepartmentName = new System.Windows.Forms.TextBox();
-            this.lblDepartmentName = new System.Windows.Forms.Label();
-            this.txtRemarks = new System.Windows.Forms.TextBox();
-            this.lblRemarks = new System.Windows.Forms.Label();
-            this.txtCheckPeople = new System.Windows.Forms.TextBox();
+            this.dtpCheckDate = new System.Windows.Forms.DateTimePicker();
             this.txtCheckContent = new System.Windows.Forms.TextBox();
             this.lblCheckContent = new System.Windows.Forms.Label();
             this.lblCheckDate = new System.Windows.Forms.Label();
-            this.dtpCheckDate = new System.Windows.Forms.DateTimePicker();
+            this.txtCheckPeople = new System.Windows.Forms.TextBox();
+            this.lblCheckPeople = new System.Windows.Forms.Label();
+            this.txtCheckResult = new System.Windows.Forms.TextBox();
+            this.lblCheckResult = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvEmployeeInfo = new System.Windows.Forms.DataGridView();
@@ -70,6 +70,55 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Location = new System.Drawing.Point(127, 209);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(206, 142);
+            this.txtRemarks.TabIndex = 7;
+            // 
+            // lblRemarks
+            // 
+            this.lblRemarks.AutoSize = true;
+            this.lblRemarks.Location = new System.Drawing.Point(38, 212);
+            this.lblRemarks.Name = "lblRemarks";
+            this.lblRemarks.Size = new System.Drawing.Size(98, 18);
+            this.lblRemarks.TabIndex = 6;
+            this.lblRemarks.Text = "备    注：";
+            // 
+            // txtDepartmentName
+            // 
+            this.txtDepartmentName.Location = new System.Drawing.Point(127, 153);
+            this.txtDepartmentName.Name = "txtDepartmentName";
+            this.txtDepartmentName.Size = new System.Drawing.Size(206, 28);
+            this.txtDepartmentName.TabIndex = 5;
+            // 
+            // lblDepartmentName
+            // 
+            this.lblDepartmentName.AutoSize = true;
+            this.lblDepartmentName.Location = new System.Drawing.Point(38, 156);
+            this.lblDepartmentName.Name = "lblDepartmentName";
+            this.lblDepartmentName.Size = new System.Drawing.Size(98, 18);
+            this.lblDepartmentName.TabIndex = 4;
+            this.lblDepartmentName.Text = "部门名称：";
+            // 
+            // txtEmplyeeName
+            // 
+            this.txtEmplyeeName.Location = new System.Drawing.Point(127, 97);
+            this.txtEmplyeeName.Name = "txtEmplyeeName";
+            this.txtEmplyeeName.Size = new System.Drawing.Size(206, 28);
+            this.txtEmplyeeName.TabIndex = 3;
+            // 
+            // lblEmplyeeName
+            // 
+            this.lblEmplyeeName.AutoSize = true;
+            this.lblEmplyeeName.Location = new System.Drawing.Point(38, 100);
+            this.lblEmplyeeName.Name = "lblEmplyeeName";
+            this.lblEmplyeeName.Size = new System.Drawing.Size(98, 18);
+            this.lblEmplyeeName.TabIndex = 2;
+            this.lblEmplyeeName.Text = "员工姓名：";
             // 
             // txtEmployeeID
             // 
@@ -104,86 +153,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "考核信息";
             // 
-            // lblCheckPeople
+            // dtpCheckDate
             // 
-            this.lblCheckPeople.AutoSize = true;
-            this.lblCheckPeople.Location = new System.Drawing.Point(38, 100);
-            this.lblCheckPeople.Name = "lblCheckPeople";
-            this.lblCheckPeople.Size = new System.Drawing.Size(98, 18);
-            this.lblCheckPeople.TabIndex = 2;
-            this.lblCheckPeople.Text = "考 核 人：";
-            // 
-            // txtCheckResult
-            // 
-            this.txtCheckResult.Location = new System.Drawing.Point(127, 43);
-            this.txtCheckResult.Name = "txtCheckResult";
-            this.txtCheckResult.Size = new System.Drawing.Size(206, 28);
-            this.txtCheckResult.TabIndex = 1;
-            // 
-            // lblCheckResult
-            // 
-            this.lblCheckResult.AutoSize = true;
-            this.lblCheckResult.Location = new System.Drawing.Point(38, 46);
-            this.lblCheckResult.Name = "lblCheckResult";
-            this.lblCheckResult.Size = new System.Drawing.Size(98, 18);
-            this.lblCheckResult.TabIndex = 0;
-            this.lblCheckResult.Text = "考核结果：";
-            // 
-            // txtEmplyeeName
-            // 
-            this.txtEmplyeeName.Location = new System.Drawing.Point(127, 97);
-            this.txtEmplyeeName.Name = "txtEmplyeeName";
-            this.txtEmplyeeName.Size = new System.Drawing.Size(206, 28);
-            this.txtEmplyeeName.TabIndex = 3;
-            // 
-            // lblEmplyeeName
-            // 
-            this.lblEmplyeeName.AutoSize = true;
-            this.lblEmplyeeName.Location = new System.Drawing.Point(38, 100);
-            this.lblEmplyeeName.Name = "lblEmplyeeName";
-            this.lblEmplyeeName.Size = new System.Drawing.Size(98, 18);
-            this.lblEmplyeeName.TabIndex = 2;
-            this.lblEmplyeeName.Text = "员工姓名：";
-            // 
-            // txtDepartmentName
-            // 
-            this.txtDepartmentName.Location = new System.Drawing.Point(127, 153);
-            this.txtDepartmentName.Name = "txtDepartmentName";
-            this.txtDepartmentName.Size = new System.Drawing.Size(206, 28);
-            this.txtDepartmentName.TabIndex = 5;
-            // 
-            // lblDepartmentName
-            // 
-            this.lblDepartmentName.AutoSize = true;
-            this.lblDepartmentName.Location = new System.Drawing.Point(38, 156);
-            this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(98, 18);
-            this.lblDepartmentName.TabIndex = 4;
-            this.lblDepartmentName.Text = "部门名称：";
-            // 
-            // txtRemarks
-            // 
-            this.txtRemarks.Location = new System.Drawing.Point(127, 209);
-            this.txtRemarks.Multiline = true;
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(206, 142);
-            this.txtRemarks.TabIndex = 7;
-            // 
-            // lblRemarks
-            // 
-            this.lblRemarks.AutoSize = true;
-            this.lblRemarks.Location = new System.Drawing.Point(38, 212);
-            this.lblRemarks.Name = "lblRemarks";
-            this.lblRemarks.Size = new System.Drawing.Size(98, 18);
-            this.lblRemarks.TabIndex = 6;
-            this.lblRemarks.Text = "备    注：";
-            // 
-            // txtCheckPeople
-            // 
-            this.txtCheckPeople.Location = new System.Drawing.Point(127, 97);
-            this.txtCheckPeople.Name = "txtCheckPeople";
-            this.txtCheckPeople.Size = new System.Drawing.Size(206, 28);
-            this.txtCheckPeople.TabIndex = 10;
+            this.dtpCheckDate.Location = new System.Drawing.Point(127, 149);
+            this.dtpCheckDate.Name = "dtpCheckDate";
+            this.dtpCheckDate.Size = new System.Drawing.Size(206, 28);
+            this.dtpCheckDate.TabIndex = 15;
             // 
             // txtCheckContent
             // 
@@ -211,12 +186,37 @@
             this.lblCheckDate.TabIndex = 11;
             this.lblCheckDate.Text = "考核日期：";
             // 
-            // dtpCheckDate
+            // txtCheckPeople
             // 
-            this.dtpCheckDate.Location = new System.Drawing.Point(127, 149);
-            this.dtpCheckDate.Name = "dtpCheckDate";
-            this.dtpCheckDate.Size = new System.Drawing.Size(206, 28);
-            this.dtpCheckDate.TabIndex = 15;
+            this.txtCheckPeople.Location = new System.Drawing.Point(127, 97);
+            this.txtCheckPeople.Name = "txtCheckPeople";
+            this.txtCheckPeople.Size = new System.Drawing.Size(206, 28);
+            this.txtCheckPeople.TabIndex = 10;
+            // 
+            // lblCheckPeople
+            // 
+            this.lblCheckPeople.AutoSize = true;
+            this.lblCheckPeople.Location = new System.Drawing.Point(38, 100);
+            this.lblCheckPeople.Name = "lblCheckPeople";
+            this.lblCheckPeople.Size = new System.Drawing.Size(98, 18);
+            this.lblCheckPeople.TabIndex = 2;
+            this.lblCheckPeople.Text = "考 核 人：";
+            // 
+            // txtCheckResult
+            // 
+            this.txtCheckResult.Location = new System.Drawing.Point(127, 43);
+            this.txtCheckResult.Name = "txtCheckResult";
+            this.txtCheckResult.Size = new System.Drawing.Size(206, 28);
+            this.txtCheckResult.TabIndex = 1;
+            // 
+            // lblCheckResult
+            // 
+            this.lblCheckResult.AutoSize = true;
+            this.lblCheckResult.Location = new System.Drawing.Point(38, 46);
+            this.lblCheckResult.Name = "lblCheckResult";
+            this.lblCheckResult.Size = new System.Drawing.Size(98, 18);
+            this.lblCheckResult.TabIndex = 0;
+            this.lblCheckResult.Text = "考核结果：";
             // 
             // btnReset
             // 
@@ -256,6 +256,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CheckAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "添加考核";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

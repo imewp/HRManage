@@ -256,6 +256,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.groupBox1);
             this.Name = "CheckManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理考核";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckInfo)).EndInit();
             this.groupBox2.ResumeLayout(false);

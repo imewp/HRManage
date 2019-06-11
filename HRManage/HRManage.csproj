@@ -139,6 +139,9 @@
     <EmbeddedResource Include="CheckSearch.resx">
       <DependentUpon>CheckSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentAdd.resx">
+      <DependentUpon>DepartmentAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DepartmentManage.resx">
       <DependentUpon>DepartmentManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManage.resx">
+      <DependentUpon>UserManage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

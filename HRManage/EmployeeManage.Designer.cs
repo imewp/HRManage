@@ -309,6 +309,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "EmployeeManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员工";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

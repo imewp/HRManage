@@ -274,7 +274,6 @@
             this.lblSalayMonth.Size = new System.Drawing.Size(98, 18);
             this.lblSalayMonth.TabIndex = 16;
             this.lblSalayMonth.Text = "发放日期：";
-           // this.lblSalayMonth.Click += new System.EventHandler(this.lblSalayMonth_Click);
             // 
             // txtEmployeeName
             // 
@@ -336,6 +335,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "SalaryManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理工资";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryInfo)).EndInit();
             this.groupBox2.ResumeLayout(false);

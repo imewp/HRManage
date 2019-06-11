@@ -104,5 +104,15 @@ namespace HRManage
             frmUserManage.MdiParent = this;
             frmUserManage.Show();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void HRManage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

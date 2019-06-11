@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtEmployeeID = new System.Windows.Forms.TextBox();
-            this.lblEmployeeID = new System.Windows.Forms.Label();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
-            this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.dtpSalayMonth = new System.Windows.Forms.DateTimePicker();
-            this.lblSalayMonth = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtpSalayMonth = new System.Windows.Forms.DateTimePicker();
+            this.lblSalayMonth = new System.Windows.Forms.Label();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.lblEmployeeName = new System.Windows.Forms.Label();
+            this.txtEmployeeID = new System.Windows.Forms.TextBox();
+            this.lblEmployeeID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtPostSalary = new System.Windows.Forms.TextBox();
-            this.lblPostSalary = new System.Windows.Forms.Label();
-            this.txtBasicSalary = new System.Windows.Forms.TextBox();
-            this.lblBasicSalary = new System.Windows.Forms.Label();
-            this.txtAllowance = new System.Windows.Forms.TextBox();
-            this.lblAllowance = new System.Windows.Forms.Label();
-            this.txtBouns = new System.Windows.Forms.TextBox();
-            this.lblBouns = new System.Windows.Forms.Label();
-            this.txtOtherSubtract = new System.Windows.Forms.TextBox();
-            this.lblOtherSubtract = new System.Windows.Forms.Label();
-            this.txtOtherAdd = new System.Windows.Forms.TextBox();
-            this.lblOtherAdd = new System.Windows.Forms.Label();
             this.txtTotalPay = new System.Windows.Forms.TextBox();
             this.lblTotalPay = new System.Windows.Forms.Label();
             this.txtFinalPay = new System.Windows.Forms.TextBox();
             this.lblFinalPay = new System.Windows.Forms.Label();
+            this.txtOtherSubtract = new System.Windows.Forms.TextBox();
+            this.lblOtherSubtract = new System.Windows.Forms.Label();
+            this.txtOtherAdd = new System.Windows.Forms.TextBox();
+            this.lblOtherAdd = new System.Windows.Forms.Label();
+            this.txtBouns = new System.Windows.Forms.TextBox();
+            this.lblBouns = new System.Windows.Forms.Label();
+            this.txtAllowance = new System.Windows.Forms.TextBox();
+            this.lblAllowance = new System.Windows.Forms.Label();
+            this.txtPostSalary = new System.Windows.Forms.TextBox();
+            this.lblPostSalary = new System.Windows.Forms.Label();
+            this.txtBasicSalary = new System.Windows.Forms.TextBox();
+            this.lblBasicSalary = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvEmployeeInfo = new System.Windows.Forms.DataGridView();
@@ -79,37 +79,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
             // 
-            // txtEmployeeID
+            // textBox1
             // 
-            this.txtEmployeeID.Location = new System.Drawing.Point(127, 42);
-            this.txtEmployeeID.Name = "txtEmployeeID";
-            this.txtEmployeeID.Size = new System.Drawing.Size(206, 28);
-            this.txtEmployeeID.TabIndex = 13;
+            this.textBox1.Location = new System.Drawing.Point(127, 186);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 222);
+            this.textBox1.TabIndex = 19;
             // 
-            // lblEmployeeID
+            // label1
             // 
-            this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.Location = new System.Drawing.Point(38, 45);
-            this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(98, 18);
-            this.lblEmployeeID.TabIndex = 12;
-            this.lblEmployeeID.Text = "员工编号：";
-            // 
-            // txtEmployeeName
-            // 
-            this.txtEmployeeName.Location = new System.Drawing.Point(127, 90);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(206, 28);
-            this.txtEmployeeName.TabIndex = 15;
-            // 
-            // lblEmployeeName
-            // 
-            this.lblEmployeeName.AutoSize = true;
-            this.lblEmployeeName.Location = new System.Drawing.Point(38, 93);
-            this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(98, 18);
-            this.lblEmployeeName.TabIndex = 14;
-            this.lblEmployeeName.Text = "员工姓名：";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "备    注：";
             // 
             // dtpSalayMonth
             // 
@@ -127,22 +112,37 @@
             this.lblSalayMonth.TabIndex = 16;
             this.lblSalayMonth.Text = "发放日期：";
             // 
-            // textBox1
+            // txtEmployeeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 186);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 222);
-            this.textBox1.TabIndex = 19;
+            this.txtEmployeeName.Location = new System.Drawing.Point(127, 90);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(206, 28);
+            this.txtEmployeeName.TabIndex = 15;
             // 
-            // label1
+            // lblEmployeeName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 18);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "备    注：";
+            this.lblEmployeeName.AutoSize = true;
+            this.lblEmployeeName.Location = new System.Drawing.Point(38, 93);
+            this.lblEmployeeName.Name = "lblEmployeeName";
+            this.lblEmployeeName.Size = new System.Drawing.Size(98, 18);
+            this.lblEmployeeName.TabIndex = 14;
+            this.lblEmployeeName.Text = "员工姓名：";
+            // 
+            // txtEmployeeID
+            // 
+            this.txtEmployeeID.Location = new System.Drawing.Point(127, 42);
+            this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.Size = new System.Drawing.Size(206, 28);
+            this.txtEmployeeID.TabIndex = 13;
+            // 
+            // lblEmployeeID
+            // 
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.Location = new System.Drawing.Point(38, 45);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(98, 18);
+            this.lblEmployeeID.TabIndex = 12;
+            this.lblEmployeeID.Text = "员工编号：";
             // 
             // groupBox2
             // 
@@ -169,69 +169,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "工资信息";
             // 
-            // txtPostSalary
+            // txtTotalPay
             // 
-            this.txtPostSalary.Location = new System.Drawing.Point(127, 90);
-            this.txtPostSalary.Name = "txtPostSalary";
-            this.txtPostSalary.Size = new System.Drawing.Size(206, 28);
-            this.txtPostSalary.TabIndex = 15;
+            this.txtTotalPay.Location = new System.Drawing.Point(127, 380);
+            this.txtTotalPay.Name = "txtTotalPay";
+            this.txtTotalPay.Size = new System.Drawing.Size(206, 28);
+            this.txtTotalPay.TabIndex = 27;
             // 
-            // lblPostSalary
+            // lblTotalPay
             // 
-            this.lblPostSalary.AutoSize = true;
-            this.lblPostSalary.Location = new System.Drawing.Point(38, 93);
-            this.lblPostSalary.Name = "lblPostSalary";
-            this.lblPostSalary.Size = new System.Drawing.Size(98, 18);
-            this.lblPostSalary.TabIndex = 14;
-            this.lblPostSalary.Text = "岗位工资：";
+            this.lblTotalPay.AutoSize = true;
+            this.lblTotalPay.Location = new System.Drawing.Point(38, 383);
+            this.lblTotalPay.Name = "lblTotalPay";
+            this.lblTotalPay.Size = new System.Drawing.Size(98, 18);
+            this.lblTotalPay.TabIndex = 26;
+            this.lblTotalPay.Text = "应得工资：";
             // 
-            // txtBasicSalary
+            // txtFinalPay
             // 
-            this.txtBasicSalary.Location = new System.Drawing.Point(127, 42);
-            this.txtBasicSalary.Name = "txtBasicSalary";
-            this.txtBasicSalary.Size = new System.Drawing.Size(206, 28);
-            this.txtBasicSalary.TabIndex = 13;
+            this.txtFinalPay.Location = new System.Drawing.Point(127, 334);
+            this.txtFinalPay.Name = "txtFinalPay";
+            this.txtFinalPay.Size = new System.Drawing.Size(206, 28);
+            this.txtFinalPay.TabIndex = 25;
             // 
-            // lblBasicSalary
+            // lblFinalPay
             // 
-            this.lblBasicSalary.AutoSize = true;
-            this.lblBasicSalary.Location = new System.Drawing.Point(38, 45);
-            this.lblBasicSalary.Name = "lblBasicSalary";
-            this.lblBasicSalary.Size = new System.Drawing.Size(98, 18);
-            this.lblBasicSalary.TabIndex = 12;
-            this.lblBasicSalary.Text = "基本工资：";
-            // 
-            // txtAllowance
-            // 
-            this.txtAllowance.Location = new System.Drawing.Point(127, 138);
-            this.txtAllowance.Name = "txtAllowance";
-            this.txtAllowance.Size = new System.Drawing.Size(206, 28);
-            this.txtAllowance.TabIndex = 17;
-            // 
-            // lblAllowance
-            // 
-            this.lblAllowance.AutoSize = true;
-            this.lblAllowance.Location = new System.Drawing.Point(38, 141);
-            this.lblAllowance.Name = "lblAllowance";
-            this.lblAllowance.Size = new System.Drawing.Size(98, 18);
-            this.lblAllowance.TabIndex = 16;
-            this.lblAllowance.Text = "补    贴：";
-            // 
-            // txtBouns
-            // 
-            this.txtBouns.Location = new System.Drawing.Point(127, 184);
-            this.txtBouns.Name = "txtBouns";
-            this.txtBouns.Size = new System.Drawing.Size(206, 28);
-            this.txtBouns.TabIndex = 19;
-            // 
-            // lblBouns
-            // 
-            this.lblBouns.AutoSize = true;
-            this.lblBouns.Location = new System.Drawing.Point(38, 187);
-            this.lblBouns.Name = "lblBouns";
-            this.lblBouns.Size = new System.Drawing.Size(98, 18);
-            this.lblBouns.TabIndex = 18;
-            this.lblBouns.Text = "奖    金：";
+            this.lblFinalPay.AutoSize = true;
+            this.lblFinalPay.Location = new System.Drawing.Point(38, 337);
+            this.lblFinalPay.Name = "lblFinalPay";
+            this.lblFinalPay.Size = new System.Drawing.Size(98, 18);
+            this.lblFinalPay.TabIndex = 24;
+            this.lblFinalPay.Text = "实发工资：";
             // 
             // txtOtherSubtract
             // 
@@ -265,37 +233,69 @@
             this.lblOtherAdd.TabIndex = 20;
             this.lblOtherAdd.Text = "其 他 加：";
             // 
-            // txtTotalPay
+            // txtBouns
             // 
-            this.txtTotalPay.Location = new System.Drawing.Point(127, 380);
-            this.txtTotalPay.Name = "txtTotalPay";
-            this.txtTotalPay.Size = new System.Drawing.Size(206, 28);
-            this.txtTotalPay.TabIndex = 27;
+            this.txtBouns.Location = new System.Drawing.Point(127, 184);
+            this.txtBouns.Name = "txtBouns";
+            this.txtBouns.Size = new System.Drawing.Size(206, 28);
+            this.txtBouns.TabIndex = 19;
             // 
-            // lblTotalPay
+            // lblBouns
             // 
-            this.lblTotalPay.AutoSize = true;
-            this.lblTotalPay.Location = new System.Drawing.Point(38, 383);
-            this.lblTotalPay.Name = "lblTotalPay";
-            this.lblTotalPay.Size = new System.Drawing.Size(98, 18);
-            this.lblTotalPay.TabIndex = 26;
-            this.lblTotalPay.Text = "应得工资：";
+            this.lblBouns.AutoSize = true;
+            this.lblBouns.Location = new System.Drawing.Point(38, 187);
+            this.lblBouns.Name = "lblBouns";
+            this.lblBouns.Size = new System.Drawing.Size(98, 18);
+            this.lblBouns.TabIndex = 18;
+            this.lblBouns.Text = "奖    金：";
             // 
-            // txtFinalPay
+            // txtAllowance
             // 
-            this.txtFinalPay.Location = new System.Drawing.Point(127, 334);
-            this.txtFinalPay.Name = "txtFinalPay";
-            this.txtFinalPay.Size = new System.Drawing.Size(206, 28);
-            this.txtFinalPay.TabIndex = 25;
+            this.txtAllowance.Location = new System.Drawing.Point(127, 138);
+            this.txtAllowance.Name = "txtAllowance";
+            this.txtAllowance.Size = new System.Drawing.Size(206, 28);
+            this.txtAllowance.TabIndex = 17;
             // 
-            // lblFinalPay
+            // lblAllowance
             // 
-            this.lblFinalPay.AutoSize = true;
-            this.lblFinalPay.Location = new System.Drawing.Point(38, 337);
-            this.lblFinalPay.Name = "lblFinalPay";
-            this.lblFinalPay.Size = new System.Drawing.Size(98, 18);
-            this.lblFinalPay.TabIndex = 24;
-            this.lblFinalPay.Text = "实发工资：";
+            this.lblAllowance.AutoSize = true;
+            this.lblAllowance.Location = new System.Drawing.Point(38, 141);
+            this.lblAllowance.Name = "lblAllowance";
+            this.lblAllowance.Size = new System.Drawing.Size(98, 18);
+            this.lblAllowance.TabIndex = 16;
+            this.lblAllowance.Text = "补    贴：";
+            // 
+            // txtPostSalary
+            // 
+            this.txtPostSalary.Location = new System.Drawing.Point(127, 90);
+            this.txtPostSalary.Name = "txtPostSalary";
+            this.txtPostSalary.Size = new System.Drawing.Size(206, 28);
+            this.txtPostSalary.TabIndex = 15;
+            // 
+            // lblPostSalary
+            // 
+            this.lblPostSalary.AutoSize = true;
+            this.lblPostSalary.Location = new System.Drawing.Point(38, 93);
+            this.lblPostSalary.Name = "lblPostSalary";
+            this.lblPostSalary.Size = new System.Drawing.Size(98, 18);
+            this.lblPostSalary.TabIndex = 14;
+            this.lblPostSalary.Text = "岗位工资：";
+            // 
+            // txtBasicSalary
+            // 
+            this.txtBasicSalary.Location = new System.Drawing.Point(127, 42);
+            this.txtBasicSalary.Name = "txtBasicSalary";
+            this.txtBasicSalary.Size = new System.Drawing.Size(206, 28);
+            this.txtBasicSalary.TabIndex = 13;
+            // 
+            // lblBasicSalary
+            // 
+            this.lblBasicSalary.AutoSize = true;
+            this.lblBasicSalary.Location = new System.Drawing.Point(38, 45);
+            this.lblBasicSalary.Name = "lblBasicSalary";
+            this.lblBasicSalary.Size = new System.Drawing.Size(98, 18);
+            this.lblBasicSalary.TabIndex = 12;
+            this.lblBasicSalary.Text = "基本工资：";
             // 
             // btnReset
             // 
@@ -335,6 +335,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "SalaryAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "添加工资";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDepartmentName = new System.Windows.Forms.TextBox();
+            this.lblDepartmentName = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.lblEmployeeName = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.dgvCheckInfo = new System.Windows.Forms.DataGridView();
-            this.txtDepartmentName = new System.Windows.Forms.TextBox();
-            this.lblDepartmentName = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckInfo)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,22 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "请输入员工信息";
+            // 
+            // txtDepartmentName
+            // 
+            this.txtDepartmentName.Location = new System.Drawing.Point(617, 38);
+            this.txtDepartmentName.Name = "txtDepartmentName";
+            this.txtDepartmentName.Size = new System.Drawing.Size(159, 28);
+            this.txtDepartmentName.TabIndex = 6;
+            // 
+            // lblDepartmentName
+            // 
+            this.lblDepartmentName.AutoSize = true;
+            this.lblDepartmentName.Location = new System.Drawing.Point(521, 41);
+            this.lblDepartmentName.Name = "lblDepartmentName";
+            this.lblDepartmentName.Size = new System.Drawing.Size(98, 18);
+            this.lblDepartmentName.TabIndex = 5;
+            this.lblDepartmentName.Text = "部门名称：";
             // 
             // btnSearch
             // 
@@ -107,22 +123,6 @@
             this.dgvCheckInfo.Size = new System.Drawing.Size(929, 535);
             this.dgvCheckInfo.TabIndex = 3;
             // 
-            // txtDepartmentName
-            // 
-            this.txtDepartmentName.Location = new System.Drawing.Point(617, 38);
-            this.txtDepartmentName.Name = "txtDepartmentName";
-            this.txtDepartmentName.Size = new System.Drawing.Size(159, 28);
-            this.txtDepartmentName.TabIndex = 6;
-            // 
-            // lblDepartmentName
-            // 
-            this.lblDepartmentName.AutoSize = true;
-            this.lblDepartmentName.Location = new System.Drawing.Point(521, 41);
-            this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(98, 18);
-            this.lblDepartmentName.TabIndex = 5;
-            this.lblDepartmentName.Text = "部门名称：";
-            // 
             // CheckSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -131,6 +131,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvCheckInfo);
             this.Name = "CheckSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "考核查询";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblEmployeeID = new System.Windows.Forms.Label();
-            this.txtEmployeeID = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtEmployeeID = new System.Windows.Forms.TextBox();
+            this.lblEmployeeID = new System.Windows.Forms.Label();
             this.dgvEmployeeInfo = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeInfo)).BeginInit();
@@ -53,21 +53,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "请输入员工信息";
             // 
-            // lblEmployeeID
+            // btnSearch
             // 
-            this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.Location = new System.Drawing.Point(44, 41);
-            this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(98, 18);
-            this.lblEmployeeID.TabIndex = 0;
-            this.lblEmployeeID.Text = "员工编号：";
-            // 
-            // txtEmployeeID
-            // 
-            this.txtEmployeeID.Location = new System.Drawing.Point(135, 38);
-            this.txtEmployeeID.Name = "txtEmployeeID";
-            this.txtEmployeeID.Size = new System.Drawing.Size(188, 28);
-            this.txtEmployeeID.TabIndex = 1;
+            this.btnSearch.Location = new System.Drawing.Point(790, 30);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(101, 40);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "查询信息";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // txtEmployeeName
             // 
@@ -85,14 +78,21 @@
             this.lblEmployeeName.TabIndex = 2;
             this.lblEmployeeName.Text = "员工姓名：";
             // 
-            // btnSearch
+            // txtEmployeeID
             // 
-            this.btnSearch.Location = new System.Drawing.Point(790, 30);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(101, 40);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "查询信息";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.txtEmployeeID.Location = new System.Drawing.Point(135, 38);
+            this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.Size = new System.Drawing.Size(188, 28);
+            this.txtEmployeeID.TabIndex = 1;
+            // 
+            // lblEmployeeID
+            // 
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.Location = new System.Drawing.Point(44, 41);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(98, 18);
+            this.lblEmployeeID.TabIndex = 0;
+            this.lblEmployeeID.Text = "员工编号：";
             // 
             // dgvEmployeeInfo
             // 
@@ -111,6 +111,7 @@
             this.Controls.Add(this.dgvEmployeeInfo);
             this.Controls.Add(this.groupBox1);
             this.Name = "EmploySearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "员工查询";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
