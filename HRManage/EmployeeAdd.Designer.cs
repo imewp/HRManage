@@ -93,6 +93,7 @@
             // 
             // cboEducation
             // 
+            this.cboEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEducation.FormattingEnabled = true;
             this.cboEducation.Items.AddRange(new object[] {
             "博士",
@@ -277,6 +278,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "新增";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnReset
             // 
@@ -286,6 +288,7 @@
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // EmployeeAdd
             // 

@@ -95,6 +95,7 @@
             // 
             // cboEducation
             // 
+            this.cboEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEducation.FormattingEnabled = true;
             this.cboEducation.Items.AddRange(new object[] {
             "博士",
@@ -279,6 +280,7 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -288,6 +290,7 @@
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dgvEmployeeInfo
             // 
@@ -297,6 +300,7 @@
             this.dgvEmployeeInfo.RowTemplate.Height = 30;
             this.dgvEmployeeInfo.Size = new System.Drawing.Size(835, 244);
             this.dgvEmployeeInfo.TabIndex = 6;
+            this.dgvEmployeeInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeInfo_CellClick);
             // 
             // EmployeeManage
             // 
@@ -311,6 +315,7 @@
             this.Name = "EmployeeManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员工";
+            this.Load += new System.EventHandler(this.EmployeeManage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

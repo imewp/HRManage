@@ -61,6 +61,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "查询信息";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtEmployeeName
             // 
