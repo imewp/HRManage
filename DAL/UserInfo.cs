@@ -14,146 +14,73 @@ namespace DAL
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public bool Add(Model.UserInfo model)
+        public bool Add(Model.UserInfo userInfo)
         {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("insert into UserInfo(");
-            strSql.Append("UserName,UserPassword,UserType)");
-            strSql.Append(" values (");
-            strSql.Append("@UserName,@UserPassword,@UserType)");
-            SqlParameter[] parameters = {
-					new SqlParameter("@UserName", SqlDbType.NVarChar,50),
-					new SqlParameter("@UserPassword", SqlDbType.NVarChar,50),
-					new SqlParameter("@UserType", SqlDbType.NVarChar,50)};
-            parameters[0].Value = model.UserName;
-            parameters[1].Value = model.UserPassword;
-            parameters[2].Value = model.UserType;
-
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
-            if (rows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            SqlParameter[] parameters ={
+                                          new SqlParameter("@UserName",SqlDbType.NVarChar,50),
+                                          new SqlParameter("@UserPassword",SqlDbType.NVarChar,50),
+                                          new SqlParameter("@UserType",SqlDbType.NVarChar,50)
+                                      };
+            parameters[0].Value = userInfo.UserName;
+            parameters[1].Value = userInfo.UserPassword;
+            parameters[2].Value = userInfo.UserType;
+            int result = 0;
+            bool re = false;
+            result = DAL.DBHelper.ExecuteSql("Pro_UserInsert", CommandType.StoredProcedure, parameters);
+            if (result > 0)
+                re = true;
+            return re;
         }
         /// <summary>
         /// 更新一条数据
         /// </summary>
-        public bool Update(Model.UserInfo model)
+        public bool Update(Model.UserInfo userInfo)
         {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("update UserInfo set ");
-            strSql.Append("UserPassword=@UserPassword,");
-            strSql.Append("UserType=@UserType");
-            strSql.Append(" where UserName=@UserName ");
-            SqlParameter[] parameters = {
-					new SqlParameter("@UserPassword", SqlDbType.NVarChar,50),
-					new SqlParameter("@UserType", SqlDbType.NVarChar,50),
-					new SqlParameter("@UserName", SqlDbType.NVarChar,50)};
-            parameters[0].Value = model.UserPassword;
-            parameters[1].Value = model.UserType;
-            parameters[2].Value = model.UserName;
-
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
-            if (rows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            SqlParameter[] parameters ={
+                                          new SqlParameter("@UserName",SqlDbType.NVarChar,50),
+                                          new SqlParameter("@UserPassword",SqlDbType.NVarChar,50),
+                                          new SqlParameter("@UserType",SqlDbType.NVarChar,50)
+                                      };
+            parameters[0].Value = userInfo.UserName;
+            parameters[1].Value = userInfo.UserPassword;
+            parameters[2].Value = userInfo.UserType;
+            int result = 0;
+            bool re = false;
+            result = DAL.DBHelper.ExecuteSql("Pro_UserUpdate", CommandType.StoredProcedure, parameters);
+            if (result > 0)
+                re = true;
+            return re;
         }
 
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(string UserName)
+        public bool Delete(Model.UserInfo userInfo)
         {
-
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("delete from UserInfo ");
-            strSql.Append(" where UserName=@UserName ");
-            SqlParameter[] parameters = {
-					new SqlParameter("@UserName", SqlDbType.NVarChar,50)			};
-            parameters[0].Value = UserName;
-
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
-            if (rows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// 得到一个对象实体
-        /// </summary>
-        public Model.UserInfo GetModel(string UserName)
-        {
-
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 UserName,UserPassword,UserType from UserInfo ");
-            strSql.Append(" where UserName=@UserName ");
-            SqlParameter[] parameters = {
-					new SqlParameter("@UserName", SqlDbType.NVarChar,50)			};
-            parameters[0].Value = UserName;
-
-            Model.UserInfo model = new Model.UserInfo();
-            DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                return DataRowToModel(ds.Tables[0].Rows[0]);
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// 得到一个对象实体
-        /// </summary>
-        public Model.UserInfo DataRowToModel(DataRow row)
-        {
-            Model.UserInfo model = new Model.UserInfo();
-            if (row != null)
-            {
-                if (row["UserName"] != null)
-                {
-                    model.UserName = row["UserName"].ToString();
-                }
-                if (row["UserPassword"] != null)
-                {
-                    model.UserPassword = row["UserPassword"].ToString();
-                }
-                if (row["UserType"] != null)
-                {
-                    model.UserType = row["UserType"].ToString();
-                }
-            }
-            return model;
+            SqlParameter[] parameters ={
+                                          new SqlParameter("@UserName",SqlDbType.NVarChar,50)
+                                      };
+            parameters[0].Value = userInfo.UserName;
+            int result = 0;
+            bool re = false;
+            result = DAL.DBHelper.ExecuteSql("Pro_UserDelete", CommandType.StoredProcedure, parameters);
+            if (result > 0)
+                re = true;
+            return re;
         }
 
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public DataSet GetList(string strWhere)
+        public DataSet GetList(Model.UserInfo userInfo)
         {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select UserName,UserPassword,UserType ");
-            strSql.Append(" FROM UserInfo ");
-            if (strWhere.Trim() != "")
-            {
-                strSql.Append(" where " + strWhere);
-            }
-            return DBHelperSQL.Query(strSql.ToString());
+            SqlParameter[] parameters ={
+                                            new SqlParameter("@UserName",SqlDbType.NVarChar,50),
+                                            new SqlParameter("@UserPassword",SqlDbType.NVarChar,50)
+                                        };
+            parameters[0].Value=userInfo.UserName;
+            parameters[1].Value=userInfo.UserPassword;
+            return DAL.DBHelper.SelectToDS("Pro_UserSelectByUserName", CommandType.StoredProcedure, parameters);
         }
 
         /// <summary>
@@ -161,10 +88,7 @@ namespace DAL
         /// </summary>
         public DataSet GetList()
         {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select UserName,UserPassword,UserType ");
-            strSql.Append(" FROM UserInfo ");
-            return DBHelperSQL.Query(strSql.ToString());
+            return DAL.DBHelper.SelectToDS("Pro_UserSelectAll", CommandType.StoredProcedure);
         }
     }
 }

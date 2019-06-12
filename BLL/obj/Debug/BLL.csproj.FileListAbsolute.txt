@@ -7,3 +7,12 @@ C:\学习\C#\c#\C#高级\HRManage\BLL\bin\Debug\Model.pdb
 C:\学习\C#\c#\C#高级\HRManage\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\学习\C#\c#\C#高级\HRManage\BLL\obj\Debug\BLL.dll
 C:\学习\C#\c#\C#高级\HRManage\BLL\obj\Debug\BLL.pdb
+D:\三层架构\HRManage\BLL\bin\Debug\BLL.dll
+D:\三层架构\HRManage\BLL\bin\Debug\BLL.pdb
+D:\三层架构\HRManage\BLL\bin\Debug\DAL.dll
+D:\三层架构\HRManage\BLL\bin\Debug\Model.dll
+D:\三层架构\HRManage\BLL\bin\Debug\DAL.pdb
+D:\三层架构\HRManage\BLL\bin\Debug\Model.pdb
+D:\三层架构\HRManage\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\三层架构\HRManage\BLL\obj\Debug\BLL.dll
+D:\三层架构\HRManage\BLL\obj\Debug\BLL.pdb

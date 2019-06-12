@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,7 +16,13 @@ namespace HRManage
         {
             InitializeComponent();
         }
-
+        private string ToMD5(string str)
+        {
+            byte[] mingWen = Encoding.UTF8.GetBytes(str);
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] miWen = md5.ComputeHash(mingWen);
+            return BitConverter.ToString(miWen).Replace("-", "");
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string strErr = "";
@@ -34,7 +41,7 @@ namespace HRManage
                 return;
             }
             string userName = txtUserName.Text.Trim();
-            string userPassword = txtUserPassword.Text.Trim();
+            string userPassword = ToMD5(txtUserPassword.Text.Trim());
             string userType = cboUserType.Text;
 
             Model.UserInfo model = new Model.UserInfo();//实例化Model层

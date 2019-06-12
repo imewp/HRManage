@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,7 +16,13 @@ namespace HRManage
         {
             InitializeComponent();
         }
-
+        private string ToMD5(string str)
+        {
+            byte[] mingWen = Encoding.UTF8.GetBytes(str);
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] miWen = md5.ComputeHash(mingWen);
+            return BitConverter.ToString(miWen).Replace("-", "");
+        }
         private void btnEdit_Click(object sender, EventArgs e)
         {
             string strErr = "";
@@ -35,7 +42,7 @@ namespace HRManage
             }
 
             string userName = txtUserName.Text;
-            string userPassword = txtUserPassword.Text;
+            string userPassword = ToMD5(txtUserPassword.Text.Trim());
             string userType = cboUserType.Text;
             BLL.UserInfo bll = new BLL.UserInfo();//实例化BLL层
             Model.UserInfo model = new Model.UserInfo();//实例化Model层
@@ -63,17 +70,17 @@ namespace HRManage
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            string userName = txtUserName.Text;
-            BLL.UserInfo bll = new BLL.UserInfo();//实例化BLL层           
-            if (bll.Delete(userName) == true)//根据返回布尔值判断是否删除数据成功
-            {
-                MessageBox.Show("用户删除成功！", "成功提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataBind();//刷新DataGridView数据
-            }
-            else
-            {
-                MessageBox.Show("用户删除失败！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //string userName = txtUserName.Text;
+            //BLL.UserInfo bll = new BLL.UserInfo();//实例化BLL层           
+            //if (bll.Delete(userName) == true)//根据返回布尔值判断是否删除数据成功
+            //{
+            //    MessageBox.Show("用户删除成功！", "成功提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    DataBind();//刷新DataGridView数据
+            //}
+            //else
+            //{
+            //    MessageBox.Show("用户删除失败！", "错误提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
         public void DataBind()//定义一个函数用于绑定数据到DataGridView
         {
