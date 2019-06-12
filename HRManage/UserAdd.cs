@@ -16,41 +16,16 @@ namespace HRManage
         {
             InitializeComponent();
         }
-        private string ToMD5(string str)
-        {
-            byte[] mingWen = Encoding.UTF8.GetBytes(str);
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] miWen = md5.ComputeHash(mingWen);
-            return BitConverter.ToString(miWen).Replace("-", "");
-        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string strErr = "";
-            if (this.txtUserName.Text.Trim().Length == 0)
-            {
-                strErr += "用户名不能为空！\\n";
-            }
-            if (this.txtUserPassword.Text.Trim().Length == 0)
-            {
-                strErr += "密码不能为空！\\n";
-            }
-
-            if (strErr != "")
-            {
-                MessageBox.Show(this, strErr);
-                return;
-            }
-            string userName = txtUserName.Text.Trim();
-            string userPassword = ToMD5(txtUserPassword.Text.Trim());
-            string userType = cboUserType.Text;
-
             Model.UserInfo model = new Model.UserInfo();//实例化Model层
-            model.UserName = userName;
-            model.UserPassword = userPassword;
-            model.UserType = userType;
+            model.UserName = txtUserName.Text.Trim();
+            model.UserPassword = txtUserPassword.Text.Trim();
+            model.UserType = cboUserType.Text;
 
             BLL.UserInfo bll = new BLL.UserInfo();//实例化BLL层
-            if (bll.Add(model) == true)//将用户信息添加到数据库中，根据返回值判断是否添加成功
+            model = bll.ToMD5(model);
+            if(bll.Add(model))
             {
                 MessageBox.Show("数据添加成功");
             }

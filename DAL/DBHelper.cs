@@ -9,7 +9,7 @@ namespace DAL
 {
     class DBHelper
     {
-        static string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["HRManageConnStr"].ToString();
+        static string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
 
         static void PrepareCommand(SqlConnection conn, SqlCommand comm, string comText, CommandType comType, SqlParameter[] cmdParms)
         {
