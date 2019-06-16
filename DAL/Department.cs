@@ -90,60 +90,6 @@ namespace DAL
             }
         }
 
-        /// <summary>
-        /// 得到一个对象实体
-        /// </summary>
-        //public Model.Department GetModel(int DepartmentID)
-        //{
-
-        //    StringBuilder strSql = new StringBuilder();
-        //    strSql.Append("select  top 1 DepartmentID,DepartmentName,HeadOfDepartment,DepartmentPhone from Department ");
-        //    strSql.Append(" where DepartmentID=@DepartmentID");
-        //    SqlParameter[] parameters = {
-        //            new SqlParameter("@DepartmentID", SqlDbType.Int,4)
-        //    };
-        //    parameters[0].Value = DepartmentID;
-
-        //    Model.Department model = new Model.Department();
-        //    DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
-        //    if (ds.Tables[0].Rows.Count > 0)
-        //    {
-        //        return DataRowToModel(ds.Tables[0].Rows[0]);
-        //    }
-        //    else
-        //    {
-        //        return null;
-        //    }
-        //}
-
-
-        /// <summary>
-        /// 得到一个对象实体
-        /// </summary>
-        //public Model.Department DataRowToModel(DataRow row)
-        //{
-        //    Model.Department model = new Model.Department();
-        //    if (row != null)
-        //    {
-        //        if (row["DepartmentID"] != null && row["DepartmentID"].ToString() != "")
-        //        {
-        //            model.DepartmentID = int.Parse(row["DepartmentID"].ToString());
-        //        }
-        //        if (row["DepartmentName"] != null)
-        //        {
-        //            model.DepartmentName = row["DepartmentName"].ToString();
-        //        }
-        //        if (row["HeadOfDepartment"] != null)
-        //        {
-        //            model.HeadOfDepartment = row["HeadOfDepartment"].ToString();
-        //        }
-        //        if (row["DepartmentPhone"] != null)
-        //        {
-        //            model.DepartmentPhone = row["DepartmentPhone"].ToString();
-        //        }
-        //    }
-        //    return model;
-        //}
 
         /// <summary>
         /// 获得数据列表
