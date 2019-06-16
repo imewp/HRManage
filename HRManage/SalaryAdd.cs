@@ -49,30 +49,18 @@ namespace HRManage
                 MessageBox.Show(this, strErr);
                 return;
             }
-            string employeeID = txtEmployeeID.Text;
-            decimal basicSalary = decimal.Parse(txtBasicSalary.Text);
-            decimal postSalary = decimal.Parse(txtPostSalary.Text);
-            decimal allowance = decimal.Parse(txtAllowance.Text);
-            decimal bouns = decimal.Parse(txtBouns.Text);
-            decimal otherAdd = decimal.Parse(txtOtherAdd.Text);
-            decimal otherSubtract = decimal.Parse(txtOtherSubtract.Text);
-            decimal finalPay = decimal.Parse(txtFinalPay.Text);
-            decimal totalPay = decimal.Parse(txtTotalPay.Text);
-            string salayMonth = dtpSalayMonth.Text;
-            string remarks = txtRemarks.Text;
-
             Model.Salary model = new Model.Salary();//实例化Model层
-            model.EmployeeID = employeeID;
-            model.BasicSalary = basicSalary;
-            model.PostSalary = postSalary;
-            model.Allowance = allowance;
-            model.Bouns = bouns;
-            model.OtherAdd = otherAdd;
-            model.OtherSubtract = otherSubtract;
-            model.FinalPay = finalPay;
-            model.TotalPay = totalPay;
-            model.SalayMonth = salayMonth;
-            model.Remarks = remarks;
+            model.EmployeeID = txtEmployeeID.Text;
+            model.BasicSalary = decimal.Parse(txtBasicSalary.Text);
+            model.PostSalary = decimal.Parse(txtPostSalary.Text);
+            model.Allowance = decimal.Parse(txtAllowance.Text);
+            model.Bouns = decimal.Parse(txtBouns.Text);
+            model.OtherAdd = decimal.Parse(txtOtherAdd.Text);
+            model.OtherSubtract = decimal.Parse(txtOtherSubtract.Text);
+            model.FinalPay = decimal.Parse(txtFinalPay.Text);
+            model.TotalPay = decimal.Parse(txtTotalPay.Text);
+            model.SalayMonth = dtpSalayMonth.Text;
+            model.Remarks = txtRemarks.Text;
 
             BLL.Salary bll = new BLL.Salary();//实例化BLL层
 

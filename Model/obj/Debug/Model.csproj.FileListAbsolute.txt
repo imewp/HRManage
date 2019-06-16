@@ -7,3 +7,7 @@ D:\三层架构\HRManage\Model\bin\Debug\Model.pdb
 D:\三层架构\HRManage\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\三层架构\HRManage\Model\obj\Debug\Model.dll
 D:\三层架构\HRManage\Model\obj\Debug\Model.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\Model\bin\Debug\Model.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\Model\bin\Debug\Model.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\Model\obj\Debug\Model.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\Model\obj\Debug\Model.pdb

@@ -29,18 +29,18 @@ namespace BLL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int SalaryID)
+        public bool Delete(Model.Salary model)
         {
-            return dal.Delete(SalaryID);
+            return dal.Delete(model);
         }
 
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.Salary GetModel(int SalaryID)
-        {
-            return dal.GetModel(SalaryID);
-        }
+        //public Model.Salary GetModel(int SalaryID)
+        //{
+        //    return dal.GetModel(SalaryID);
+        //}
 
         /// <summary>
         /// 获得数据列表

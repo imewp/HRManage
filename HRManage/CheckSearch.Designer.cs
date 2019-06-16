@@ -32,7 +32,7 @@
             this.txtDepartmentName = new System.Windows.Forms.TextBox();
             this.lblDepartmentName = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.txtEmplyeeName = new System.Windows.Forms.TextBox();
             this.lblEmployeeName = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.groupBox1.Controls.Add(this.txtDepartmentName);
             this.groupBox1.Controls.Add(this.lblDepartmentName);
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.txtEmployeeName);
+            this.groupBox1.Controls.Add(this.txtEmplyeeName);
             this.groupBox1.Controls.Add(this.lblEmployeeName);
             this.groupBox1.Controls.Add(this.txtEmployeeID);
             this.groupBox1.Controls.Add(this.lblEmployeeID);
@@ -81,13 +81,15 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "查询信息";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtEmployeeName
+            // txtEmplyeeName
             // 
-            this.txtEmployeeName.Location = new System.Drawing.Point(348, 38);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(159, 28);
-            this.txtEmployeeName.TabIndex = 3;
+            this.txtEmplyeeName.AcceptsReturn = true;
+            this.txtEmplyeeName.Location = new System.Drawing.Point(348, 38);
+            this.txtEmplyeeName.Name = "txtEmplyeeName";
+            this.txtEmplyeeName.Size = new System.Drawing.Size(159, 28);
+            this.txtEmplyeeName.TabIndex = 3;
             // 
             // lblEmployeeName
             // 
@@ -144,7 +146,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtEmployeeName;
+        private System.Windows.Forms.TextBox txtEmplyeeName;
         private System.Windows.Forms.Label lblEmployeeName;
         private System.Windows.Forms.TextBox txtEmployeeID;
         private System.Windows.Forms.Label lblEmployeeID;

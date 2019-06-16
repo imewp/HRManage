@@ -27,16 +27,11 @@ namespace DAL
             parameters[0].Value = model.DepartmentName;
             parameters[1].Value = model.HeadOfDepartment;
             parameters[2].Value = model.DepartmentPhone;
-
-            object obj = DBHelperSQL.GetSingle(strSql.ToString(), parameters);
-            if (obj == null)
-            {
-                return 0;
-            }
-            else
-            {
-                return Convert.ToInt32(obj);
-            }
+            int result = 0;
+            result = DAL.DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
+            if (result > 0)
+                return result;
+            return result;
         }
         /// <summary>
         /// 更新一条数据
@@ -59,7 +54,7 @@ namespace DAL
             parameters[2].Value = model.DepartmentPhone;
             parameters[3].Value = model.DepartmentID;
 
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
             if (rows > 0)
             {
                 return true;
@@ -73,7 +68,7 @@ namespace DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int DepartmentID)
+        public bool Delete(Model.Department model)
         {
 
             StringBuilder strSql = new StringBuilder();
@@ -82,9 +77,9 @@ namespace DAL
             SqlParameter[] parameters = {
 					new SqlParameter("@DepartmentID", SqlDbType.Int,4)
 			};
-            parameters[0].Value = DepartmentID;
+            parameters[0].Value = model.DepartmentID;
 
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
             if (rows > 0)
             {
                 return true;
@@ -98,57 +93,57 @@ namespace DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.Department GetModel(int DepartmentID)
-        {
+        //public Model.Department GetModel(int DepartmentID)
+        //{
 
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 DepartmentID,DepartmentName,HeadOfDepartment,DepartmentPhone from Department ");
-            strSql.Append(" where DepartmentID=@DepartmentID");
-            SqlParameter[] parameters = {
-					new SqlParameter("@DepartmentID", SqlDbType.Int,4)
-			};
-            parameters[0].Value = DepartmentID;
+        //    StringBuilder strSql = new StringBuilder();
+        //    strSql.Append("select  top 1 DepartmentID,DepartmentName,HeadOfDepartment,DepartmentPhone from Department ");
+        //    strSql.Append(" where DepartmentID=@DepartmentID");
+        //    SqlParameter[] parameters = {
+        //            new SqlParameter("@DepartmentID", SqlDbType.Int,4)
+        //    };
+        //    parameters[0].Value = DepartmentID;
 
-            Model.Department model = new Model.Department();
-            DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                return DataRowToModel(ds.Tables[0].Rows[0]);
-            }
-            else
-            {
-                return null;
-            }
-        }
+        //    Model.Department model = new Model.Department();
+        //    DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
+        //    if (ds.Tables[0].Rows.Count > 0)
+        //    {
+        //        return DataRowToModel(ds.Tables[0].Rows[0]);
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}
 
 
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.Department DataRowToModel(DataRow row)
-        {
-            Model.Department model = new Model.Department();
-            if (row != null)
-            {
-                if (row["DepartmentID"] != null && row["DepartmentID"].ToString() != "")
-                {
-                    model.DepartmentID = int.Parse(row["DepartmentID"].ToString());
-                }
-                if (row["DepartmentName"] != null)
-                {
-                    model.DepartmentName = row["DepartmentName"].ToString();
-                }
-                if (row["HeadOfDepartment"] != null)
-                {
-                    model.HeadOfDepartment = row["HeadOfDepartment"].ToString();
-                }
-                if (row["DepartmentPhone"] != null)
-                {
-                    model.DepartmentPhone = row["DepartmentPhone"].ToString();
-                }
-            }
-            return model;
-        }
+        //public Model.Department DataRowToModel(DataRow row)
+        //{
+        //    Model.Department model = new Model.Department();
+        //    if (row != null)
+        //    {
+        //        if (row["DepartmentID"] != null && row["DepartmentID"].ToString() != "")
+        //        {
+        //            model.DepartmentID = int.Parse(row["DepartmentID"].ToString());
+        //        }
+        //        if (row["DepartmentName"] != null)
+        //        {
+        //            model.DepartmentName = row["DepartmentName"].ToString();
+        //        }
+        //        if (row["HeadOfDepartment"] != null)
+        //        {
+        //            model.HeadOfDepartment = row["HeadOfDepartment"].ToString();
+        //        }
+        //        if (row["DepartmentPhone"] != null)
+        //        {
+        //            model.DepartmentPhone = row["DepartmentPhone"].ToString();
+        //        }
+        //    }
+        //    return model;
+        //}
 
         /// <summary>
         /// 获得数据列表
@@ -162,7 +157,7 @@ namespace DAL
             {
                 strSql.Append(" where " + strWhere);
             }
-            return DBHelperSQL.Query(strSql.ToString());
+            return DBHelper.SelectToDS(strSql.ToString(), CommandType.Text);
         }
 
         /// <summary>
@@ -173,7 +168,7 @@ namespace DAL
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select DepartmentID,DepartmentName,HeadOfDepartment,DepartmentPhone ");
             strSql.Append(" FROM Department ");
-            return DBHelperSQL.Query(strSql.ToString());
+            return DBHelper.SelectToDS(strSql.ToString(),CommandType.Text);
         }
     }
 }

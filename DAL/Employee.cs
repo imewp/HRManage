@@ -41,7 +41,7 @@ namespace DAL
             parameters[8].Value = model.Position;
             parameters[9].Value = model.Remarks;
 
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
             if (rows > 0)
             {
                 return true;
@@ -90,7 +90,7 @@ namespace DAL
             parameters[8].Value = model.Remarks;
             parameters[9].Value = model.EmployeeID;
 
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
             if (rows > 0)
             {
                 return true;
@@ -104,7 +104,7 @@ namespace DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(string EmployeeID)
+        public bool Delete(Model.Employee model)
         {
 
             StringBuilder strSql = new StringBuilder();
@@ -112,9 +112,9 @@ namespace DAL
             strSql.Append(" where EmployeeID=@EmployeeID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@EmployeeID", SqlDbType.NVarChar,50)			};
-            parameters[0].Value = EmployeeID;
+            parameters[0].Value = model.EmployeeID;
 
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
             if (rows > 0)
             {
                 return true;
@@ -128,80 +128,80 @@ namespace DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.Employee GetModel(string EmployeeID)
-        {
+        //public Model.Employee GetModel(string EmployeeID)
+        //{
 
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 EmployeeID,EmployeeName,Sex,Birthday,Phone,HireDate,Education,DepartmentID,Position,Remarks from Employee ");
-            strSql.Append(" where EmployeeID=@EmployeeID ");
-            SqlParameter[] parameters = {
-					new SqlParameter("@EmployeeID", SqlDbType.NVarChar,50)			};
-            parameters[0].Value = EmployeeID;
+        //    StringBuilder strSql = new StringBuilder();
+        //    strSql.Append("select  top 1 EmployeeID,EmployeeName,Sex,Birthday,Phone,HireDate,Education,DepartmentID,Position,Remarks from Employee ");
+        //    strSql.Append(" where EmployeeID=@EmployeeID ");
+        //    SqlParameter[] parameters = {
+        //            new SqlParameter("@EmployeeID", SqlDbType.NVarChar,50)			};
+        //    parameters[0].Value = EmployeeID;
 
-            Model.Employee model = new Model.Employee();
-            DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                return DataRowToModel(ds.Tables[0].Rows[0]);
-            }
-            else
-            {
-                return null;
-            }
-        }
+        //    Model.Employee model = new Model.Employee();
+        //    DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
+        //    if (ds.Tables[0].Rows.Count > 0)
+        //    {
+        //        return DataRowToModel(ds.Tables[0].Rows[0]);
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}
 
 
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.Employee DataRowToModel(DataRow row)
-        {
-            Model.Employee model = new Model.Employee();
-            if (row != null)
-            {
-                if (row["EmployeeID"] != null)
-                {
-                    model.EmployeeID = row["EmployeeID"].ToString();
-                }
-                if (row["EmployeeName"] != null)
-                {
-                    model.EmployeeName = row["EmployeeName"].ToString();
-                }
-                if (row["Sex"] != null)
-                {
-                    model.Sex = row["Sex"].ToString();
-                }
-                if (row["Birthday"] != null && row["Birthday"].ToString() != "")
-                {
-                    model.Birthday = DateTime.Parse(row["Birthday"].ToString());
-                }
-                if (row["Phone"] != null)
-                {
-                    model.Phone = row["Phone"].ToString();
-                }
-                if (row["HireDate"] != null && row["HireDate"].ToString() != "")
-                {
-                    model.HireDate = DateTime.Parse(row["HireDate"].ToString());
-                }
-                if (row["Education"] != null)
-                {
-                    model.Education = row["Education"].ToString();
-                }
-                if (row["DepartmentID"] != null && row["DepartmentID"].ToString() != "")
-                {
-                    model.DepartmentID = int.Parse(row["DepartmentID"].ToString());
-                }
-                if (row["Position"] != null)
-                {
-                    model.Position = row["Position"].ToString();
-                }
-                if (row["Remarks"] != null)
-                {
-                    model.Remarks = row["Remarks"].ToString();
-                }
-            }
-            return model;
-        }
+        //public Model.Employee DataRowToModel(DataRow row)
+        //{
+        //    Model.Employee model = new Model.Employee();
+        //    if (row != null)
+        //    {
+        //        if (row["EmployeeID"] != null)
+        //        {
+        //            model.EmployeeID = row["EmployeeID"].ToString();
+        //        }
+        //        if (row["EmployeeName"] != null)
+        //        {
+        //            model.EmployeeName = row["EmployeeName"].ToString();
+        //        }
+        //        if (row["Sex"] != null)
+        //        {
+        //            model.Sex = row["Sex"].ToString();
+        //        }
+        //        if (row["Birthday"] != null && row["Birthday"].ToString() != "")
+        //        {
+        //            model.Birthday = DateTime.Parse(row["Birthday"].ToString());
+        //        }
+        //        if (row["Phone"] != null)
+        //        {
+        //            model.Phone = row["Phone"].ToString();
+        //        }
+        //        if (row["HireDate"] != null && row["HireDate"].ToString() != "")
+        //        {
+        //            model.HireDate = DateTime.Parse(row["HireDate"].ToString());
+        //        }
+        //        if (row["Education"] != null)
+        //        {
+        //            model.Education = row["Education"].ToString();
+        //        }
+        //        if (row["DepartmentID"] != null && row["DepartmentID"].ToString() != "")
+        //        {
+        //            model.DepartmentID = int.Parse(row["DepartmentID"].ToString());
+        //        }
+        //        if (row["Position"] != null)
+        //        {
+        //            model.Position = row["Position"].ToString();
+        //        }
+        //        if (row["Remarks"] != null)
+        //        {
+        //            model.Remarks = row["Remarks"].ToString();
+        //        }
+        //    }
+        //    return model;
+        //}
 
         /// <summary>
         /// 获得数据列表
@@ -215,7 +215,7 @@ namespace DAL
             {
                 strSql.Append(" where " + strWhere);
             }
-            return DBHelperSQL.Query(strSql.ToString());
+            return DBHelper.SelectToDS(strSql.ToString(), CommandType.Text);
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace DAL
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select EmployeeID,EmployeeName,Sex,Birthday,Phone,HireDate,Education,DepartmentID,Position,Remarks ");
             strSql.Append(" FROM Employee ");
-            return DBHelperSQL.Query(strSql.ToString());
+            return DBHelper.SelectToDS(strSql.ToString(), CommandType.Text);
         }
     }
 }

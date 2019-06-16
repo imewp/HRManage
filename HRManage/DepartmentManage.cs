@@ -18,19 +18,15 @@ namespace HRManage
         int departmentID;//定义部门编号
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            string departmentName = txtDepartmentName.Text.Trim();
-            string headOfDepartment = txtHeadOfDepartment.Text.Trim();
-            string departmentPhone = txtDepartmentPhone.Text.Trim();
-            BLL.Department bll = new BLL.Department();//实例化BLL层
             Model.Department model = new Model.Department();//实例化Model层
             model.DepartmentID = departmentID;//departmentID值从dgvDepartmentInfo的CellClick事件取得
-            model.DepartmentName = departmentName;
-            model.HeadOfDepartment = headOfDepartment;
-            model.DepartmentPhone = departmentPhone;
-
-            if (departmentName != "" && headOfDepartment != "" && departmentPhone != "")
+            model.DepartmentName = txtDepartmentName.Text.Trim();
+            model.HeadOfDepartment = txtHeadOfDepartment.Text.Trim();
+            model.DepartmentPhone = txtDepartmentPhone.Text.Trim();
+            BLL.Department bll = new BLL.Department();//实例化BLL层
+            if (txtDepartmentName.Text.Trim() != "" && txtHeadOfDepartment.Text.Trim() != "" && txtDepartmentPhone.Text.Trim() != "")
             {
-                if (bll.Update(model) == true)//根据返回布尔值判断是否修改数据成功
+                if (bll.Update(model))//根据返回布尔值判断是否修改数据成功
                 {
                     MessageBox.Show("部门信息修改成功！", "成功提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataBind();//刷新DataGridView数据
@@ -48,8 +44,10 @@ namespace HRManage
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            Model.Department model = new Model.Department();//实例化Model层
+            model.DepartmentID = departmentID;//departmentID值从dgvDepartmentInfo的CellClick事件取得
             BLL.Department bll = new BLL.Department();//实例化BLL层
-            if (bll.Delete(departmentID) == true)//根据返回布尔值判断是否删除数据成功
+            if (bll.Delete(model))//根据返回布尔值判断是否删除数据成功
             {
                 MessageBox.Show("部门信息删除成功！", "成功提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataBind();//刷新DataGridView数据

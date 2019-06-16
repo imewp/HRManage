@@ -44,32 +44,19 @@ namespace HRManage
                 MessageBox.Show(this, strErr);
                 return;
             }
-            string employeeID = txtEmployeeID.Text;
-            string emplyeeName = txtEmployeeName.Text;
-            string sex = cboSex.Text;
-            DateTime birthday = DateTime.Parse(dtpBirthday.Text);
-            string phone = txtPhone.Text;
-            DateTime hireDate = DateTime.Parse(dtpHireDate.Text);
-            string education = cboEducation.Text;
-            int departmentID = int.Parse(txtDepartmentID.Text);
-            string position = txtPosition.Text;
-            string remarks = txtRemarks.Text;
-
             Model.Employee model = new Model.Employee();//实例化Model层
-            model.EmployeeID = employeeID;
-            model.EmployeeName = emplyeeName;
-            model.Sex = sex;
-            model.Birthday = birthday;
-            model.Phone = phone;
-            model.HireDate = hireDate;
-            model.Education = education;
-            model.DepartmentID = departmentID;
-            model.Position = position;
-            model.Remarks = remarks;
-
+            model.EmployeeID = txtEmployeeID.Text;
+            model.EmployeeName = txtEmployeeName.Text;
+            model.Sex = cboSex.Text;
+            model.Birthday = DateTime.Parse(dtpBirthday.Text);
+            model.Phone = txtPhone.Text;
+            model.HireDate = DateTime.Parse(dtpHireDate.Text);
+            model.Education = cboEducation.Text;
+            model.DepartmentID = int.Parse(txtDepartmentID.Text);
+            model.Position = txtPosition.Text;
+            model.Remarks = txtRemarks.Text;
             BLL.Employee bll = new BLL.Employee();//实例化BLL层
-
-            if (bll.Update(model) == true)//根据返回布尔值判断是否修改数据成功
+            if (bll.Update(model))//根据返回布尔值判断是否修改数据成功
             {
                 MessageBox.Show("员工信息修改成功");
                 DataBind();//刷新DataGridView数据
@@ -108,9 +95,10 @@ namespace HRManage
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string employeeID = txtEmployeeID.Text;
+            Model.Employee model = new Model.Employee();//实例化Model层
+            model.EmployeeID = txtEmployeeID.Text;
             BLL.Employee bll = new BLL.Employee();//实例化BLL层
-            if (bll.Delete(employeeID) == true)//根据返回布尔值判断是否删除数据成功
+            if (bll.Delete(model))//根据返回布尔值判断是否删除数据成功
             {
                 MessageBox.Show("员工信息删除成功！", "成功提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataBind();//刷新DataGridView数据

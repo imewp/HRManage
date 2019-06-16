@@ -114,5 +114,19 @@ namespace HRManage
         {
             Application.Exit();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            EmployeeManage frmEmployeeManage = new EmployeeManage();
+            frmEmployeeManage.MdiParent = this;
+            frmEmployeeManage.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            SalaryManage frmSalaryManage = new SalaryManage();
+            frmSalaryManage.MdiParent = this;
+            frmSalaryManage.Show();
+        }
     }
 }

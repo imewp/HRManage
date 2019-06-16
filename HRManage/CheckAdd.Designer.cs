@@ -33,7 +33,7 @@
             this.lblRemarks = new System.Windows.Forms.Label();
             this.txtDepartmentName = new System.Windows.Forms.TextBox();
             this.lblDepartmentName = new System.Windows.Forms.Label();
-            this.txtEmplyeeName = new System.Windows.Forms.TextBox();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.lblEmplyeeName = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.lblRemarks);
             this.groupBox1.Controls.Add(this.txtDepartmentName);
             this.groupBox1.Controls.Add(this.lblDepartmentName);
-            this.groupBox1.Controls.Add(this.txtEmplyeeName);
+            this.groupBox1.Controls.Add(this.txtEmployeeName);
             this.groupBox1.Controls.Add(this.lblEmplyeeName);
             this.groupBox1.Controls.Add(this.txtEmployeeID);
             this.groupBox1.Controls.Add(this.lblEmployeeID);
@@ -104,12 +104,12 @@
             this.lblDepartmentName.TabIndex = 4;
             this.lblDepartmentName.Text = "部门名称：";
             // 
-            // txtEmplyeeName
+            // txtEmployeeName
             // 
-            this.txtEmplyeeName.Location = new System.Drawing.Point(127, 97);
-            this.txtEmplyeeName.Name = "txtEmplyeeName";
-            this.txtEmplyeeName.Size = new System.Drawing.Size(206, 28);
-            this.txtEmplyeeName.TabIndex = 3;
+            this.txtEmployeeName.Location = new System.Drawing.Point(127, 97);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(206, 28);
+            this.txtEmployeeName.TabIndex = 3;
             // 
             // lblEmplyeeName
             // 
@@ -226,6 +226,7 @@
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnAdd
             // 
@@ -235,6 +236,7 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvEmployeeInfo
             // 
@@ -244,6 +246,7 @@
             this.dgvEmployeeInfo.RowTemplate.Height = 30;
             this.dgvEmployeeInfo.Size = new System.Drawing.Size(830, 214);
             this.dgvEmployeeInfo.TabIndex = 6;
+            this.dgvEmployeeInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeInfo_CellClick);
             // 
             // CheckAdd
             // 
@@ -258,6 +261,7 @@
             this.Name = "CheckAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "添加考核";
+            this.Load += new System.EventHandler(this.CheckAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -280,7 +284,7 @@
         private System.Windows.Forms.Label lblRemarks;
         private System.Windows.Forms.TextBox txtDepartmentName;
         private System.Windows.Forms.Label lblDepartmentName;
-        private System.Windows.Forms.TextBox txtEmplyeeName;
+        private System.Windows.Forms.TextBox txtEmployeeName;
         private System.Windows.Forms.Label lblEmplyeeName;
         private System.Windows.Forms.TextBox txtCheckContent;
         private System.Windows.Forms.Label lblCheckContent;

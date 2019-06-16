@@ -44,15 +44,12 @@ namespace DAL
             parameters[9].Value = model.SalayMonth;
             parameters[10].Value = model.Remarks;
 
-            object obj = DBHelperSQL.GetSingle(strSql.ToString(), parameters);
-            if (obj == null)
-            {
-                return 0;
-            }
-            else
-            {
-                return Convert.ToInt32(obj);
-            }
+            int rows = 0;
+            rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
+            if (rows > 0)
+                return rows;
+            return rows;
+   
         }
         /// <summary>
         /// 更新一条数据
@@ -99,7 +96,7 @@ namespace DAL
             parameters[10].Value = model.Remarks;
             parameters[11].Value = model.SalaryID;
 
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
             if (rows > 0)
             {
                 return true;
@@ -113,7 +110,7 @@ namespace DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int SalaryID)
+        public bool Delete(Model.Salary model)
         {
 
             StringBuilder strSql = new StringBuilder();
@@ -122,9 +119,9 @@ namespace DAL
             SqlParameter[] parameters = {
 					new SqlParameter("@SalaryID", SqlDbType.Int,4)
 			};
-            parameters[0].Value = SalaryID;
+            parameters[0].Value = model.SalaryID;
 
-            int rows = DBHelperSQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DBHelper.ExecuteSql(strSql.ToString(), CommandType.Text, parameters);
             if (rows > 0)
             {
                 return true;
@@ -138,88 +135,88 @@ namespace DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.Salary GetModel(int SalaryID)
-        {
+        //public Model.Salary GetModel(int SalaryID)
+        //{
 
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 SalaryID,EmployeeID,BasicSalary,PostSalary,Allowance,Bouns,OtherAdd,OtherSubtract,FinalPay,TotalPay,SalayMonth,Remarks from Salary ");
-            strSql.Append(" where SalaryID=@SalaryID");
-            SqlParameter[] parameters = {
-					new SqlParameter("@SalaryID", SqlDbType.Int,4)
-			};
-            parameters[0].Value = SalaryID;
+        //    StringBuilder strSql = new StringBuilder();
+        //    strSql.Append("select  top 1 SalaryID,EmployeeID,BasicSalary,PostSalary,Allowance,Bouns,OtherAdd,OtherSubtract,FinalPay,TotalPay,SalayMonth,Remarks from Salary ");
+        //    strSql.Append(" where SalaryID=@SalaryID");
+        //    SqlParameter[] parameters = {
+        //            new SqlParameter("@SalaryID", SqlDbType.Int,4)
+        //    };
+        //    parameters[0].Value = SalaryID;
 
-            Model.Salary model = new Model.Salary();
-            DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                return DataRowToModel(ds.Tables[0].Rows[0]);
-            }
-            else
-            {
-                return null;
-            }
-        }
+        //    Model.Salary model = new Model.Salary();
+        //    DataSet ds = DBHelperSQL.Query(strSql.ToString(), parameters);
+        //    if (ds.Tables[0].Rows.Count > 0)
+        //    {
+        //        return DataRowToModel(ds.Tables[0].Rows[0]);
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}
 
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.Salary DataRowToModel(DataRow row)
-        {
-            Model.Salary model = new Model.Salary();
-            if (row != null)
-            {
-                if (row["SalaryID"] != null && row["SalaryID"].ToString() != "")
-                {
-                    model.SalaryID = int.Parse(row["SalaryID"].ToString());
-                }
-                if (row["EmployeeID"] != null)
-                {
-                    model.EmployeeID = row["EmployeeID"].ToString();
-                }
-                if (row["BasicSalary"] != null && row["BasicSalary"].ToString() != "")
-                {
-                    model.BasicSalary = decimal.Parse(row["BasicSalary"].ToString());
-                }
-                if (row["PostSalary"] != null && row["PostSalary"].ToString() != "")
-                {
-                    model.PostSalary = decimal.Parse(row["PostSalary"].ToString());
-                }
-                if (row["Allowance"] != null && row["Allowance"].ToString() != "")
-                {
-                    model.Allowance = decimal.Parse(row["Allowance"].ToString());
-                }
-                if (row["Bouns"] != null && row["Bouns"].ToString() != "")
-                {
-                    model.Bouns = decimal.Parse(row["Bouns"].ToString());
-                }
-                if (row["OtherAdd"] != null && row["OtherAdd"].ToString() != "")
-                {
-                    model.OtherAdd = decimal.Parse(row["OtherAdd"].ToString());
-                }
-                if (row["OtherSubtract"] != null && row["OtherSubtract"].ToString() != "")
-                {
-                    model.OtherSubtract = decimal.Parse(row["OtherSubtract"].ToString());
-                }
-                if (row["FinalPay"] != null && row["FinalPay"].ToString() != "")
-                {
-                    model.FinalPay = decimal.Parse(row["FinalPay"].ToString());
-                }
-                if (row["TotalPay"] != null && row["TotalPay"].ToString() != "")
-                {
-                    model.TotalPay = decimal.Parse(row["TotalPay"].ToString());
-                }
-                if (row["SalayMonth"] != null)
-                {
-                    model.SalayMonth = row["SalayMonth"].ToString();
-                }
-                if (row["Remarks"] != null)
-                {
-                    model.Remarks = row["Remarks"].ToString();
-                }
-            }
-            return model;
-        }
+        //public Model.Salary DataRowToModel(DataRow row)
+        //{
+        //    Model.Salary model = new Model.Salary();
+        //    if (row != null)
+        //    {
+        //        if (row["SalaryID"] != null && row["SalaryID"].ToString() != "")
+        //        {
+        //            model.SalaryID = int.Parse(row["SalaryID"].ToString());
+        //        }
+        //        if (row["EmployeeID"] != null)
+        //        {
+        //            model.EmployeeID = row["EmployeeID"].ToString();
+        //        }
+        //        if (row["BasicSalary"] != null && row["BasicSalary"].ToString() != "")
+        //        {
+        //            model.BasicSalary = decimal.Parse(row["BasicSalary"].ToString());
+        //        }
+        //        if (row["PostSalary"] != null && row["PostSalary"].ToString() != "")
+        //        {
+        //            model.PostSalary = decimal.Parse(row["PostSalary"].ToString());
+        //        }
+        //        if (row["Allowance"] != null && row["Allowance"].ToString() != "")
+        //        {
+        //            model.Allowance = decimal.Parse(row["Allowance"].ToString());
+        //        }
+        //        if (row["Bouns"] != null && row["Bouns"].ToString() != "")
+        //        {
+        //            model.Bouns = decimal.Parse(row["Bouns"].ToString());
+        //        }
+        //        if (row["OtherAdd"] != null && row["OtherAdd"].ToString() != "")
+        //        {
+        //            model.OtherAdd = decimal.Parse(row["OtherAdd"].ToString());
+        //        }
+        //        if (row["OtherSubtract"] != null && row["OtherSubtract"].ToString() != "")
+        //        {
+        //            model.OtherSubtract = decimal.Parse(row["OtherSubtract"].ToString());
+        //        }
+        //        if (row["FinalPay"] != null && row["FinalPay"].ToString() != "")
+        //        {
+        //            model.FinalPay = decimal.Parse(row["FinalPay"].ToString());
+        //        }
+        //        if (row["TotalPay"] != null && row["TotalPay"].ToString() != "")
+        //        {
+        //            model.TotalPay = decimal.Parse(row["TotalPay"].ToString());
+        //        }
+        //        if (row["SalayMonth"] != null)
+        //        {
+        //            model.SalayMonth = row["SalayMonth"].ToString();
+        //        }
+        //        if (row["Remarks"] != null)
+        //        {
+        //            model.Remarks = row["Remarks"].ToString();
+        //        }
+        //    }
+        //    return model;
+        //}
 
         /// <summary>
         /// 获得数据列表
@@ -233,7 +230,7 @@ namespace DAL
             {
                 strSql.Append(" where " + strWhere);
             }
-            return DBHelperSQL.Query(strSql.ToString());
+            return DBHelper.SelectToDS(strSql.ToString(), CommandType.Text);
         }
 
         /// <summary>
@@ -244,7 +241,7 @@ namespace DAL
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select SalaryID,EmployeeID,BasicSalary,PostSalary,Allowance,Bouns,OtherAdd,OtherSubtract,FinalPay,TotalPay,SalayMonth,Remarks ");
             strSql.Append(" FROM Salary ");
-            return DBHelperSQL.Query(strSql.ToString());
+            return DBHelper.SelectToDS(strSql.ToString(), CommandType.Text);
         }
     }
 }

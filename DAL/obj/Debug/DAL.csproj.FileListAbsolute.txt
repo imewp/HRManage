@@ -12,3 +12,10 @@ D:\三层架构\HRManage\DAL\bin\Debug\Model.pdb
 D:\三层架构\HRManage\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\三层架构\HRManage\DAL\obj\Debug\DAL.dll
 D:\三层架构\HRManage\DAL\obj\Debug\DAL.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\DAL\bin\Debug\DAL.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\DAL\bin\Debug\DAL.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\DAL\bin\Debug\Model.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\DAL\bin\Debug\Model.pdb
+C:\学习\C#\c#\C#高级\HRManage\HRManage\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\学习\C#\c#\C#高级\HRManage\HRManage\DAL\obj\Debug\DAL.dll
+C:\学习\C#\c#\C#高级\HRManage\HRManage\DAL\obj\Debug\DAL.pdb

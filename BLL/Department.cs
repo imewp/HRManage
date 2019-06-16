@@ -29,17 +29,9 @@ namespace BLL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int DepartmentID)
+        public bool Delete(Model.Department model)
         {
-            return dal.Delete(DepartmentID);
-        }
-
-        /// <summary>
-        /// 得到一个对象实体
-        /// </summary>
-        public Model.Department GetModel(int DepartmentID)
-        {
-            return dal.GetModel(DepartmentID);
+            return dal.Delete(model);
         }
 
         /// <summary>

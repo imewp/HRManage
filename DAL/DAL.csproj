@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Check.cs" />
     <Compile Include="DBHelper.cs" />
-    <Compile Include="DBHelperSQL.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

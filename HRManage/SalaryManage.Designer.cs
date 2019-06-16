@@ -298,6 +298,7 @@
             // 
             this.txtEmployeeID.Location = new System.Drawing.Point(127, 42);
             this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.ReadOnly = true;
             this.txtEmployeeID.Size = new System.Drawing.Size(206, 28);
             this.txtEmployeeID.TabIndex = 13;
             // 

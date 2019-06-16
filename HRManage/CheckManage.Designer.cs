@@ -39,7 +39,7 @@
             this.lblRemarks = new System.Windows.Forms.Label();
             this.txtDepartmentName = new System.Windows.Forms.TextBox();
             this.lblDepartmentName = new System.Windows.Forms.Label();
-            this.txtEmplyeeName = new System.Windows.Forms.TextBox();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.lblEmplyeeName = new System.Windows.Forms.Label();
             this.lblCheckPeople = new System.Windows.Forms.Label();
             this.txtCheckResult = new System.Windows.Forms.TextBox();
@@ -62,6 +62,7 @@
             this.dgvCheckInfo.RowTemplate.Height = 30;
             this.dgvCheckInfo.Size = new System.Drawing.Size(830, 214);
             this.dgvCheckInfo.TabIndex = 11;
+            this.dgvCheckInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCheckInfo_CellClick);
             // 
             // btnDelete
             // 
@@ -71,6 +72,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dtpCheckDate
             // 
@@ -145,12 +147,12 @@
             this.lblDepartmentName.TabIndex = 4;
             this.lblDepartmentName.Text = "部门名称：";
             // 
-            // txtEmplyeeName
+            // txtEmployeeName
             // 
-            this.txtEmplyeeName.Location = new System.Drawing.Point(127, 97);
-            this.txtEmplyeeName.Name = "txtEmplyeeName";
-            this.txtEmplyeeName.Size = new System.Drawing.Size(206, 28);
-            this.txtEmplyeeName.TabIndex = 3;
+            this.txtEmployeeName.Location = new System.Drawing.Point(127, 97);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(206, 28);
+            this.txtEmployeeName.TabIndex = 3;
             // 
             // lblEmplyeeName
             // 
@@ -227,6 +229,7 @@
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // groupBox1
             // 
@@ -234,7 +237,7 @@
             this.groupBox1.Controls.Add(this.lblRemarks);
             this.groupBox1.Controls.Add(this.txtDepartmentName);
             this.groupBox1.Controls.Add(this.lblDepartmentName);
-            this.groupBox1.Controls.Add(this.txtEmplyeeName);
+            this.groupBox1.Controls.Add(this.txtEmployeeName);
             this.groupBox1.Controls.Add(this.lblEmplyeeName);
             this.groupBox1.Controls.Add(this.txtEmployeeID);
             this.groupBox1.Controls.Add(this.lblEmployeeID);
@@ -258,6 +261,7 @@
             this.Name = "CheckManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理考核";
+            this.Load += new System.EventHandler(this.CheckManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckInfo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -280,7 +284,7 @@
         private System.Windows.Forms.Label lblRemarks;
         private System.Windows.Forms.TextBox txtDepartmentName;
         private System.Windows.Forms.Label lblDepartmentName;
-        private System.Windows.Forms.TextBox txtEmplyeeName;
+        private System.Windows.Forms.TextBox txtEmployeeName;
         private System.Windows.Forms.Label lblEmplyeeName;
         private System.Windows.Forms.Label lblCheckPeople;
         private System.Windows.Forms.TextBox txtCheckResult;
